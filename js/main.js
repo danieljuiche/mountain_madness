@@ -14,6 +14,12 @@ $(document).ready(function() {
 	// Game loop
 
 
+	// Play area clicking
+	$("#play-area").click(function() {
+		dirt_add(10);
+		console.log(dirt);
+	});
+
 	// Functions for adding dirt
 	function dirt_add(amount) {
 		dirt += amount;
