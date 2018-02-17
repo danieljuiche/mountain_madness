@@ -6,6 +6,24 @@
     padding: 5px;
     background: white;
     overflow: auto;
-    height: 400px;
+    height: 600px;
  	overflow-y: scroll;
+}
+
+.left-box {
+	border: 2px solid black;
+}
+
+.box {
+	border: 5px solid black;
+}
+
+.col {
+	padding-top: 2em;
+	position: relative;
+}
+
+.sticky-bottom {
+	position:absolute;
+	bottom:0
 }
