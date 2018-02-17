@@ -12,6 +12,8 @@
 
 .left-box {
 	border: 2px solid black;
+	width:960px;
+    margin: 0 auto; 
 }
 
 .box {
@@ -24,6 +26,7 @@
 }
 
 .sticky-bottom {
-	position:absolute;
+	position:relative;
 	bottom:0
 }
+
