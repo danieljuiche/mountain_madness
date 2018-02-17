@@ -1,1 +1,11 @@
 /* Css styling goes here */
+
+.scrollable {
+	position: relative;
+    border: 5px solid black;
+    padding: 5px;
+    background: white;
+    overflow: auto;
+    height: 400px;
+ 	overflow-y: scroll;
+}
