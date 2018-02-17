@@ -1,5 +1,4 @@
 $(document).ready(function() {
-<<<<<<< Updated upstream
 
 	// Initialized variables
 	var dirt = 0;
@@ -19,7 +18,6 @@ $(document).ready(function() {
 	function dirt_add(amount) {
 		dirt += amount;
 	}
-=======
-	console.log("JQUERY READY");
->>>>>>> Stashed changes
+
+	//jusung
 });
