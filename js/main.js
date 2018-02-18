@@ -24,38 +24,6 @@ $(document).ready(function() {
 			rock_quarry: 0,
 			ore_quarry: 0
 		},
-		// purchased_passives: {
-		// 	workers: {
-		// 		level: 0,
-		// 		cost: 1,
-		// 		effect:1
-		// 	},
-		// 	vehicles: {
-		// 		level: 0,
-		// 		cost:1000,
-		// 		effect:5
-		// 	}, 
-		// 	slaves:{
-		// 		level: 0,
-		// 		cost:250,
-		// 		effect:1
-		// 	},
-		// 	forester: {
-		// 		level: 0,
-		// 		cost:25000,
-		// 		effect:100
-		// 	},
-		// 	rock_quarry: {
-		// 		level: 0,
-		// 		cost:15000,
-		// 		effect:100
-		// 	},
-		// 	ore_quarry: {
-		// 		level: 0,
-		// 		cost:50000,
-		// 		effect:100
-		// 	}
-		// },
 
 		// Active upgrade levels
 		purchased_upgrades: {
