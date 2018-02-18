@@ -29,7 +29,7 @@ $(document).ready(function() {
 			buckets: 0, 
 			shovels: 0, 
 			trucks: 0, // added "trucks" variable
-			extractor: 0,
+			excavator: 0,
 			backhoe: 0,
 			axe: 0,
 			hacksaw: 0,
