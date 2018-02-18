@@ -18,6 +18,10 @@ p {
     user-select: none;
 }
 
+.no-padding {
+	padding: 0px;
+}
+
 /* 
 	
 	Overlay section 
@@ -36,6 +40,14 @@ p {
     background-color: rgba(50,75,150,0.5); /* Turqoise background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
+}
+
+#save {
+	z-index: 10;
+}
+
+#load {
+	z-index: 10;
 }
 
 #text{
@@ -80,7 +92,15 @@ p {
 
 h1 {
 	font-size: 30px;
+	margin-bottom: 10px;
+}
 
+p {
+	margin-bottom: 5px;
+}
+
+li {
+	line-height: 20px;
 }
 .object_pictures {
 	position: absolute;
@@ -100,6 +120,12 @@ h1 {
     height: 400px;
  	overflow-y: scroll;
  	border-radius: 25px 25px 25px 25px;
+}
+
+.save-container {
+	position: absolute;
+	bottom: 0px;
+	right: 5%;
 }
 
 .overlay-box {
@@ -127,11 +153,12 @@ h1 {
 .text-container {
 	border-radius: 25px;
 	padding-left: 1em;
+	margin-bottom: 8px;
 }
 
 .scroll-title {
 	font-size: 25px;
-	padding-top: .5em;
+	padding-top: 10px;
 	font-weight: bold;
 	font-family: Trebuchet MS;
 }
@@ -161,7 +188,7 @@ h1 {
 /* Putting the mountain stages on the bottom of div container */
 .div-wrapper {
     position: relative;
-    height: calc(100% - 60px);
+    height: 100%;
     width: 100%;
     background-color: #f1ecda;
 }
