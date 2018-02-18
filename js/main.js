@@ -24,7 +24,6 @@ $(document).ready(function() {
 			rock_quarry: 0,
 			ore_quarry: 0
 		},
-		// Active upgrade levels
 		purchased_upgrades: {
 			buckets: 0, 
 			shovels: 0, 
@@ -172,7 +171,51 @@ $(document).ready(function() {
 		}
 	}
 
+
 	var game_update_frequency = 500; //Milliseconds
+
+	/**************************************
+
+			Saving & Loading
+
+	***************************************/
+
+	function save_game() {
+		var save_file = {
+			dirt: dirt,
+			wood: wood,
+			stone: stone,
+			metal: metal,
+			students: students,
+			player_statistics: player_stats,
+			upgrade_costs: upgrade_costs,
+		}
+		localStorage.setItem("save",JSON.stringify(save_file));
+	}
+
+	$("#save").click(function(){
+		save_game();
+	});
+
+	$("#load").click(function(){
+		var load_file = JSON.parse(localStorage.getItem("save"));
+		if (typeof load_file !== "undefined") {
+			dirt = load_file.dirt;
+			wood = load_file.wood;
+			stone = load_file.stone;
+			metal = load_file.metal;
+			students = load_file.students;
+			player_stats = load_file.player_statistics;
+			upgrade_costs = load_file.upgrade_costs;
+		}
+		update_resources();
+	});
+
+	/**************************************
+
+			End Saving & Loading
+
+	***************************************/
 
 	/**************************************
 
@@ -360,6 +403,7 @@ $(document).ready(function() {
 			player_stats.purchased_upgrades["pickaxe"] += 1;
 			cost_increase("pickaxe"); // Increase cost
 			update_resources(); // Update resources immediately
+			console.log("Pickaxe bought!");
 		}
 	});
 
@@ -474,10 +518,10 @@ $(document).ready(function() {
 		$(".metal-amount").html("Metal: " + metal);
 		$(".student-amount").html("Students: " + students);
 
-		$(".passive-dirt").html("Passive Dirt Gain: " + player_stats.passive_dirt);
-		$(".passive-wood").html("Passive Wood Gain: " + player_stats.passive_wood);
-		$(".passive-stone").html("Passive Stone Gain: " + player_stats.passive_stone);
-		$(".passive-metal").html("Passive Metal Gain: " + player_stats.passive_metal);
+		$(".passive-dirt").html("Dirt: " + player_stats.passive_dirt);
+		$(".passive-wood").html("Wood:" + player_stats.passive_wood);
+		$(".passive-stone").html("Stone: " + player_stats.passive_stone);
+		$(".passive-metal").html("Metal: " + player_stats.passive_metal);
 
 		//update passive levels
 		$("#workers").html("Workers Lv." + player_stats.purchased_passives.workers);
@@ -520,7 +564,7 @@ $(document).ready(function() {
 		$("#hacksaw-dirt").html("Cost: " + upgrade_costs.hacksaw.metal + " Metal");
 		
 
-		console.log("updating scoreboard");
+		// console.log("updating scoreboard");
 	}
 
 
@@ -548,6 +592,12 @@ $(document).ready(function() {
 		upgrade_costs[upgrade_name].wood = Math.ceil(Math.pow(upgrade_costs[upgrade_name].wood, 1.1));
 		upgrade_costs[upgrade_name].stone = Math.ceil(Math.pow(upgrade_costs[upgrade_name].stone , 1.1));
 		upgrade_costs[upgrade_name].metal = Math.ceil(Math.pow(upgrade_costs[upgrade_name].metal , 1.1));
+	}
+
+	// Function to check for visual effects
+	function check_visuals() {
+
+
 	}
 
 	/**************************************
