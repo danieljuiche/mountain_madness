@@ -1,6 +1,10 @@
 /* Css styling goes here */
 
 /*Prevents highlighting of css elements*/
+.left-box:not(.scrollable) {
+	background-color: rgb(241, 236, 218);
+}
+
 .noSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -10,6 +14,44 @@
     user-select: none;
 }
 
+/* 
+	
+	Overlay section 
+
+*/
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Shown by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#text{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+/*
+
+	End of overlay section
+
+*/
+.top-text {
+	font-weight: bold;
+	font-family: Trebuchet MS;
+}
 .not-allowed {
     background-color: lightgrey;
 	cursor: not-allowed;
@@ -23,10 +65,19 @@
 	position: relative;
 }
 
-.no-bullets {
-	list-style-type: none;
+.hidden {
+	display: none !important;
 }
 
+.no-bullets {
+	list-style-type: none;
+	font-family: Trebuchet MS;
+}
+
+h1 {
+	font-size: 30px;
+
+}
 .object_pictures {
 	margin-right:3em;
 }
@@ -42,16 +93,21 @@
  	border-radius: 25px 25px 25px 25px;
 }
 
+.overlay-box {
+	max-width: 600px;
+    overflow: auto;
+    height: 600px;
+    overflow-y: scroll;
+    margin: auto;
+    margin-top: 5%;
+    background: white;
+}
+
 .round {
 	border-radius: 25px 25px 25px 25px;
+	padding: 0.3em,0.3em,0.3em.0.3em;
+	margin-bottom: 1em;
 }
-
-.button-group {
-	display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-
 
 .left-box {
 	border: 2px solid black;
@@ -62,11 +118,14 @@
 .text-container {
 	border-radius: 25px;
 	padding-left: 1em;
+	background: #d6ffc4;
 }
 
 .scroll-title {
+	font-size: 25px;
 	padding-top: .5em;
 	font-weight: bold;
+	font-family: Trebuchet MS;
 }
 
 .box {
@@ -85,6 +144,7 @@
     height: calc(100% - 60px);
     width: 100%;
     background-color: #f1ecda;
+
 }
 .div-wrapper img {
     position: absolute;
@@ -102,6 +162,10 @@ img {
 	left: 50%;
 	bottom: 0px;
 	transform: translate(-50%, 0);
+}
+
+#play-area {
+	background-color: rgb(241, 236, 218);
 }
 
 /* Displaying mountain stages by id (mountain0 = default)*/
