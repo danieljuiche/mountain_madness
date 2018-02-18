@@ -224,7 +224,7 @@ $(document).ready(function() {
 	***************************************/
 
 	// Workers upgrade button
-	$("#workers").click(function() {
+	$(".workers-passive").click(function() {
 		if (resource_purchase_check("workers")) {
 			resource_purchase_update("workers"); // Take away the resources to purchase the tool
 			player_stats.passive_dirt += 1; // Increase passive amount
@@ -235,7 +235,7 @@ $(document).ready(function() {
 	});
 
 	// vehicles upgrade button
-	$("#vehicles").click(function() {
+	$(".vehicles-passive").click(function() {
 		if (resource_purchase_check("vehicles")) {
 			resource_purchase_update("vehicles"); // Take away the resources to purchase the tool
 			player_stats.passive_dirt += 5; // Increase passive amount
@@ -246,7 +246,7 @@ $(document).ready(function() {
 	});
 
 	// dirt_slaves upgrade button
-	$("#slaves").click(function() {
+	$(".slaves-passive").click(function() {
 		if (resource_purchase_check("slaves")) {
 			resource_purchase_update("slaves"); // Take away the resources to purchase the tool
 			player_stats.passive_dirt += 1; // Increase passive amount
@@ -257,7 +257,7 @@ $(document).ready(function() {
 	});
 
 	// collect_wood upgrade button
-	$("#forester").click(function() {
+	$(".forester-passive").click(function() {
 		if (resource_purchase_check("forester")) {
 			resource_purchase_update("forester"); // Take away the resources to purchase the tool
 			player_stats.passive_wood += 100; // Increase passive amount
@@ -268,7 +268,7 @@ $(document).ready(function() {
 	});
 
 	// collect_stone upgrade button
-	$("#rock_quarry").click(function() {
+	$(".rock_quarry-passive").click(function() {
 		if (resource_purchase_check("rock_quarry")) {
 			resource_purchase_update("rock_quarry"); // Take away the resources to purchase the tool
 			player_stats.passive_stone += 100; // Increase passive amount
@@ -279,7 +279,7 @@ $(document).ready(function() {
 	});
 
 	//collect_metal upgrade button
-	$("#ore_quarry").click(function() {
+	$(".ore_quarry-passive").click(function() {
 		if (resource_purchase_check("ore_quarry")) {
 			resource_purchase_update("ore_quarry"); // Take away the resources to purchase the tool
 			player_stats.passive_metal += 100; // Increase passive amount
@@ -540,11 +540,17 @@ $(document).ready(function() {
 
 		//update passive levels
 		$("#workers").html("Workers Lv." + player_stats.purchased_passives.workers);
+		$("#workers-dirt").html("Cost: " + upgrade_costs.workers.dirt + " Dirt");
 		$("#vehicles").html("Vehicles Lv." + player_stats.purchased_passives.vehicles);
+		$("#vehicles-dirt").html("Cost: " + upgrade_costs.vehicles.dirt + " Dirt");
 		$("#slaves").html("Slaves Lv." + player_stats.purchased_passives.slaves);
+		$("#slaves-dirt").html("Cost: " + upgrade_costs.slaves.dirt + " Dirt");
 		$("#forester").html("Forester Lv." + player_stats.purchased_passives.forester);
+		$("#forester-dirt").html("Cost: " + upgrade_costs.forester.dirt + " Dirt");
 		$("#rock_quarry").html("Rock Quarry Lv." + player_stats.purchased_passives.rock_quarry);
+		$("#rock_quarry-dirt").html("Cost: " + upgrade_costs.rock_quarry.dirt + " Dirt");
 		$("#ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$("#ore_quarry-dirt").html("Cost: " + upgrade_costs.ore_quarry.dirt + " Dirt");
 
 		$(".upgrade-bucket").html("Bucket Upgrade (Level " + player_stats.purchased_upgrades.buckets + ")");
 		$("#bucket-dirt").html("Cost: " + upgrade_costs.buckets.dirt + " Dirt");
