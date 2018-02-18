@@ -532,21 +532,21 @@ $(document).ready(function() {
 		$("#ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
 
 		$(".upgrade-chainsaw").html("Chainsaw Upgrade (Level " + player_stats.purchased_upgrades.chainsaw +")");
-		$(".chainsaw-dirt").html("Cost: " + upgrade_costs.chainsaw.metal);
+		$(".chainsaw-dirt").html("Cost: " + upgrade_costs.chainsaw.metal + " Metal");
 		$(".upgrade-pickaxes").html("Pickaxe Upgrade (Level " + player_stats.purchased_upgrades.pickaxe +")");
-		$(".pickaxes-dirt").html("Cost: " + upgrade_costs.pickaxe.wood + "woods, " + upgrade_costs.drill.metal + "metals");
+		$(".pickaxes-dirt").html("Cost: " + upgrade_costs.pickaxe.wood + " Wood and " + upgrade_costs.drill.metal + " Metal");
 		$(".upgrade-sledgehammers").html("Sledgehammer Upgrade (Level " + player_stats.purchased_upgrades.sledgehammer +")");
-		$(".sledgehammer-dirt").html("Cost: " + upgrade_costs.sledgehammer.wood + "woods, " + upgrade_costs.sledgehammer.metal + "metals");
+		$(".sledgehammer-dirt").html("Cost: " + upgrade_costs.sledgehammer.wood + " Wood and " + upgrade_costs.sledgehammer.metal + " Metal");
 		$(".upgrade-dynamite").html("Dynamite Upgrade (Level " + player_stats.purchased_upgrades.dynamite +")");
-		$(".dynamite-dirt").html("Cost: " + upgrade_costs.dynamite.dirt);
+		$(".dynamite-dirt").html("Cost: " + upgrade_costs.dynamite.dirt + " Dirt");
 		$(".upgrade-drills").html("Drills Upgrade (Level " + player_stats.purchased_upgrades.drill +")");
-		$(".drills-dirt").html("Cost: " + upgrade_costs.drill.metal);
+		$(".drills-dirt").html("Cost: " + upgrade_costs.drill.metal + " Metal");
 		$(".upgrade-minecarts").html("Minecart Upgrade (Level " + player_stats.purchased_upgrades.minecart +")");
-		$(".minecarts-dirt").html("Cost: " + upgrade_costs.minecart.metal);
+		$(".minecarts-dirt").html("Cost: " + upgrade_costs.minecart.metal + " Metal");
 		$(".upgrade-extractors").html("Extractor Upgrade (Level " + player_stats.purchased_upgrades.extractor +")");
-		$(".extractors-dirt").html("Cost: " + upgrade_costs.extractor.metal);
+		$(".extractors-dirt").html("Cost: " + upgrade_costs.extractor.metal + " Metal");
 		$(".upgrade-students").html("Students Upgrade (Level " + students +")");
-		$(".students-dirt").html("Cost: " + upgrade_costs.students.dirt);
+		$(".students-dirt").html("Cost: " + upgrade_costs.students.dirt + " Dirt");
 
 		$(".upgrade-bucket").html("Bucket Upgrade (Level " + player_stats.purchased_upgrades.buckets + ")");
 		$("#bucket-dirt").html("Cost: " + upgrade_costs.buckets.dirt + " Dirt");
