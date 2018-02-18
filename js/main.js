@@ -22,6 +22,13 @@ $(document).ready(function() {
 
 	var game_update_frequency = 500; //Milliseconds
 
+	function Students(population) {
+		this.population = 0;
+	}
+
+	function AutomaticCollectors(dirtCost, dirtSec, woodSec, stoneSec, metalSec) {
+		this.dirtCost = 
+	}
 	// Object for active skills
 
 	// Active upgrade information
@@ -38,6 +45,38 @@ $(document).ready(function() {
 
 
 	// Upgrades
+
+	//dirt_slaves upgrade button
+	$("#dirt_slaves").click(function()) {
+		if(dirt >= 250) {
+			player_stats.purchased_passives.dirt_level += 1;
+			resource_change(250,0,0,0,0);
+		}	
+	}
+
+	// collect_wood upgrade button
+	$("#collect_wood").click(function()) {
+		if(dirt >= 25000) {
+			player_stats.purchased_passives.wood_level += 1;
+			resource_change(25000,0,0,0,0);
+		}
+	}
+
+	// collect_stone upgrade button
+	$("#collect_stone").click(function()) {
+		if(dirt >= 15000) {
+			player_stats.purchased_passives.stone_level += 1;
+			resource_change(15000,0,0,0,0);
+		}
+	}
+
+	//collect_metal upgrade button
+	$("#collect_ore").click(function()) {
+		if(dirt >= 50000) {
+			player_stats.purchased_passives.metal_level += 1;
+			resource_change(50000,0,0,0,0);
+		}
+	}
 
 	// Main game loop
 
