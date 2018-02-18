@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var wood = 1000000;
 	var stone = 1000000;
 	var metal = 1000000;
-	var students = 1000000;
+	var students = 10000;
 
 	var player_stats = {
 		dirt_per_click: 1,
@@ -860,10 +860,10 @@ $(document).ready(function() {
 
 	// Function for cost increases
 	function cost_increase(upgrade_name) {
-		upgrade_costs[upgrade_name].dirt = Math.ceil(Math.pow(upgrade_costs[upgrade_name].dirt, 1.1));
-		upgrade_costs[upgrade_name].wood = Math.ceil(Math.pow(upgrade_costs[upgrade_name].wood, 1.1));
-		upgrade_costs[upgrade_name].stone = Math.ceil(Math.pow(upgrade_costs[upgrade_name].stone , 1.1));
-		upgrade_costs[upgrade_name].metal = Math.ceil(Math.pow(upgrade_costs[upgrade_name].metal , 1.1));
+		upgrade_costs[upgrade_name].dirt = Math.ceil(upgrade_costs[upgrade_name].dirt* 1.1);
+		upgrade_costs[upgrade_name].wood = Math.ceil(upgrade_costs[upgrade_name].wood* 1.1);
+		upgrade_costs[upgrade_name].stone = Math.ceil(upgrade_costs[upgrade_name].stone * 1.1);
+		upgrade_costs[upgrade_name].metal = Math.ceil(upgrade_costs[upgrade_name].metal * 1.1);
 	}
 
 	// Function to check for visual effects
