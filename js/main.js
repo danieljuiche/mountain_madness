@@ -245,7 +245,7 @@ $(document).ready(function() {
 	}
 
 
-	var game_update_frequency = 5; //Milliseconds
+	var game_update_frequency = 1; //Milliseconds
 
 
 	/**************************************
@@ -934,6 +934,16 @@ $(document).ready(function() {
 	}
 
 	function random_events() {
+		d = Math.random();
+
+		if(d<0.0001) {
+			alert("EARTHQUAKE! PEOPLE ARE DIEING EVERYWHERE! ITS ALL COMING DOWN!");
+			workers = Math.ceil(0.8*workers);
+			slaves = Math.ceil(0.8*slaves);
+		} else if (d < 0.0005){
+			alert("FIRE! You just lost half you wood.");
+			wood = Math.ceil(0.5*wood);
+		} 
 
 	}
 	/**************************************
