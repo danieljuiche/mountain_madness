@@ -10,6 +10,11 @@
     user-select: none;
 }
 
+.not-allowed {
+    background-color: lightgrey;
+	cursor: not-allowed;
+}
+
 .absolute {
 	position: absolute;
 }

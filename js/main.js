@@ -40,6 +40,17 @@ $(document).ready(function() {
 			minecart: 0,
 			extractor: 0,
 		},
+		purchased_buildings:{
+			dormitory: 0,
+			MBC: 0,
+			blusson: 0,
+			SSC: 0,
+			library: 0,
+			SUB: 0,
+			saywell: 0,
+			ASB: 0,
+			WMC: 0
+		},
 		dirt_mound_level: {
 			"0": 1,
 			"1": 0,
@@ -173,6 +184,60 @@ $(document).ready(function() {
 		},
 		students: {
 			dirt: 1000,
+			wood: 0,
+			stone: 0,
+			metal: 0
+		},
+		dormitory: {
+			dirt: 1000,
+			wood: 0,
+			stone: 0,
+			metal: 0
+		},
+		MBC: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 0
+		},
+		blusson: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 0
+		},
+		SSC: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 0
+		},
+		library: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 0
+		},
+		SUB: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 0
+		},
+		saywell: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 0
+		},
+		ASB: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 0
+		},
+		WMC: {
+			dirt: 0,
 			wood: 0,
 			stone: 0,
 			metal: 0
@@ -500,6 +565,108 @@ $(document).ready(function() {
 		    
 	***************************************/
 
+
+	/**************************************
+
+		    Building Upgrade Section
+		    
+	***************************************/
+
+	$(".dormitory-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("dormitory") && player_stats.purchased_buildings.dormitory == 0 ) {
+			resource_purchase_update("dormitory"); // Take away the resources to purchase the tool
+			player_stats.purchased_buildings.dormitory = 1;
+			$(".dormitory-upgrade").addClass("not-allowed"); // Disable selection vvisual effects
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".MBC-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("MBC") && player_stats.purchased_buildings.MBC == 0 ) {
+			resource_purchase_update("MBC"); // Take away the resources to purchase the tool
+			player_stats.purchased_buildings.MBC = 1;
+			$(".MBC-upgrade").addClass("not-allowed"); // Disable selection vvisual effects
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".blusson-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("blusson") && player_stats.purchased_buildings.blusson == 0 ) {
+			resource_purchase_update("blusson"); // Take away the resources to purchase the tool
+			player_stats.purchased_buildings.blusson = 1;
+			$(".blusson-upgrade").addClass("not-allowed"); // Disable selection vvisual effects
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".SSC-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("SSC") && player_stats.purchased_buildings.SSC == 0 ) {
+			resource_purchase_update("SSC"); // Take away the resources to purchase the tool
+			player_stats.purchased_buildings.SSC = 1;
+			$(".SSC-upgrade").addClass("not-allowed"); // Disable selection vvisual effects
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".library-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("library") && player_stats.purchased_buildings.library == 0 ) {
+			resource_purchase_update("library"); // Take away the resources to purchase the tool
+			player_stats.purchased_buildings.library = 1;
+			$(".library-upgrade").addClass("not-allowed"); // Disable selection vvisual effects
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".SUB-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("SUB") && player_stats.purchased_buildings.SUB == 0 ) {
+			resource_purchase_update("SUB"); // Take away the resources to purchase the tool
+			player_stats.purchased_buildings.SUB = 1;
+			$(".SUB-upgrade").addClass("not-allowed"); // Disable selection vvisual effects
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".saywell-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("saywell") && player_stats.purchased_buildings.saywell == 0 ) {
+			resource_purchase_update("saywell"); // Take away the resources to purchase the tool
+			player_stats.purchased_buildings.saywell = 1;
+			$(".saywell-upgrade").addClass("not-allowed"); // Disable selection vvisual effects
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".ASB-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("ASB") && player_stats.purchased_buildings.ASB == 0 ) {
+			resource_purchase_update("ASB"); // Take away the resources to purchase the tool
+			player_stats.purchased_buildings.ASB = 1;
+			$(".ASB-upgrade").addClass("not-allowed"); // Disable selection vvisual effects
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".WMC-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("WMC") && player_stats.purchased_buildings.WMC == 0 ) {
+			resource_purchase_update("WMC"); // Take away the resources to purchase the tool
+			player_stats.purchased_buildings.WMC = 1;
+			$(".WMC-upgrade").addClass("not-allowed"); // Disable selection vvisual effects
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	/**************************************
+
+		    End Building Upgrade Section
+		    
+	***************************************/
 
 	/**************************************
 
