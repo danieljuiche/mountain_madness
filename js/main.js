@@ -15,13 +15,34 @@ $(document).ready(function() {
 		purchased_passives: {
 			workers: {
 				level: 0,
-				cost: 100
+				cost: 1,
+				effect:1
 			},
-			vehicles_level: 0,
-			slaves_level: 0,
-			forester_level: 0,
-			rock_quarry_level: 0,
-			ore_quarry_level: 0
+			vehicles: {
+				level: 0,
+				cost:1000,
+				effect:5
+			}, 
+			slaves:{
+				level: 0,
+				cost:250,
+				effect:1
+			},
+			forester: {
+				level: 0,
+				cost:25000,
+				effect:100
+			},
+			rock_quarry: {
+				level: 0,
+				cost:15000,
+				effect:100
+			},
+			ore_quarry: {
+				level: 0,
+				cost:50000,
+				effect:100
+			}
 		},
 
 		// True or false switches for active upgrades
@@ -53,41 +74,117 @@ $(document).ready(function() {
 	var game_update_frequency = 500; //Milliseconds
 
 	// Check for passive upgrades
+	// workers upgrade button
+	$("#workers").click(function() {
+		var cost = player_stats.purchased_passives.workers.cost;
+
+		cost = cost*(Math.pow(1.1,player_stats.purchased_passives.workers.level));  
+
+		if(dirt >= cost) {
+			player_stats.purchased_passives.workers.level += 1;
+			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.workers.level));
+			resource_change(-cost,0,0,0,0);
+		}	
+	});
+
+	//vehicles upgrade button
+	$("#vehicles").click(function() {
+		var cost = player_stats.purchased_passives.vehicles.cost;
+
+		cost = cost*(Math.pow(1.1,player_stats.purchased_passives.vehicles.level));  
+
+		if(dirt >= cost) {
+			player_stats.purchased_passives.vehicles.leveld += 1;
+			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.vehicles.level));
+			resource_change(-cost,0,0,0,0);
+		}	
+	});
+
 	//dirt_slaves upgrade button
-	$("#dirt_slaves").click(function() {
-		if(dirt >= 250) {
-			player_stats.purchased_passives.dirt_level += 1;
-			resource_change(250,0,0,0,0);
+	$("#slaves").click(function() {
+		var cost = player_stats.purchased_passives.slaves.cost;
+
+		cost = cost*(Math.pow(1.1,player_stats.purchased_passives.slaves.level));  
+
+		if(dirt >= cost) {
+			player_stats.purchased_passives.slaves.level += 1;
+			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.slaves.level));
+			resource_change(-cost,0,0,0,0);
 		}	
 	});
 
 	// collect_wood upgrade button
-	$("#collect_wood").click(function() {
-		if(dirt >= 25000) {
-			player_stats.purchased_passives.wood_level += 1;
-			resource_change(25000,0,0,0,0);
+	$("#forester").click(function() {
+		var cost = player_stats.purchased_passives.forester.cost;
+
+		cost = cost*(Math.pow(1.1,player_stats.purchased_passives.forester.level));
+
+		if(dirt >= cost) {
+			player_stats.purchased_passives.forester.level += 1;
+			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.forester.level));
+			resource_change(-cost,0,0,0,0);
 		}
 	});
 
 	// collect_stone upgrade button
-	$("#collect_stone").click(function() {
-		if(dirt >= 15000) {
-			player_stats.purchased_passives.stone_level += 1;
-			resource_change(15000,0,0,0,0);
+	$("#rock_quarry").click(function() {
+		var cost = player_stats.purchased_passives.rock_quarry.cost;
+
+		cost = cost*(Math.pow(1.1,player_stats.purchased_passives.rock_quarry.level));
+
+		if(dirt >= cost) {
+			player_stats.purchased_passives.rock_quarry.level += 1;
+			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.rock_quarry.level));
+			resource_change(-cost,0,0,0,0);
 		}
 	});
 
 	//collect_metal upgrade button
-	$("#collect_ore").click(function() {
-		if(dirt >= 50000) {
-			player_stats.purchased_passives.metal_level += 1;
-			resource_change(50000,0,0,0,0);
+	$("#ore_quarry").click(function() {
+		var cost = player_stats.purchased_passives.ore_quarry.cost;
+
+		cost = cost*(Math.pow(1.1,player_stats.purchased_passives.ore_quarry.level));
+
+		if(dirt >= cost) {
+			player_stats.purchased_passives.ore_quarry.level += 1;
+			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.ore_quarry.level));
+			resource_change(-cost,0,0,0,0);
 		}
 	});
 
 
 	// Main game loop which updates at set intervals
 	setInterval(function(){ 
+		if(player_stats.purchased_passives.workers.level > 0) {
+			var level = player_stats.purchased_passives.workers.level;
+			resource_change((player_stats.purchased_passives.workers.effect * level),0,0,0,0);
+		} 
+
+		if(player_stats.purchased_passives.vehicles.level > 0) {
+			var level = player_stats.purchased_passives.vehicles.level;
+			resource_change((player_stats.purchased_passives.vehicles.effect * level),0,0,0,0);
+		} 
+
+		if(player_stats.purchased_passives.slaves.level > 0) {
+			var level = player_stats.purchased_passives.slaves.level;
+			resource_change((player_stats.purchased_passives.slaves.effect * level),0,0,0,0);
+		} 
+
+		if(player_stats.purchased_passives.forester.level > 0) {
+			var level = player_stats.purchased_passives.forester.level;
+			resource_change((player_stats.purchased_passives.forester.effect * level),0,0,0,0);
+		} 
+
+		if(player_stats.purchased_passives.rock_quarry.level > 0) {
+			var level = player_stats.purchased_passives.rock_quarry.level;
+			resource_change((player_stats.purchased_passives.rock_quarry.effect * level),0,0,0,0);
+		} 
+
+		if(player_stats.purchased_passives.ore_quarry.level > 0) {
+			var level = player_stats.purchased_passives.ore_quarry.level;
+			resource_change((player_stats.purchased_passives.ore_quarry.effect * level),0,0,0,0);
+		} 
+
 		update_resources();
 	}, game_update_frequency);
 
@@ -115,6 +212,7 @@ $(document).ready(function() {
 		$(".stone-amount").html("Stone: " + stone);
 		$(".metal-amount").html("Metal: " + metal);
 		$(".students-amount").html("Students: " + students);
+		console.log("updating scoreboard");
 	}
 
 });
