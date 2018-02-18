@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
 	// Initialized and current resources
-	var dirt = 1000000;
-	var wood = 10000;
-	var stone = 10000;
-	var metal = 10000;
-	var students = 10000;
+	var dirt = 100000000;
+	var wood = 1000000;
+	var stone = 1000000;
+	var metal = 1000000;
+	var students = 1000000;
 
 	var player_stats = {
 		dirt_per_click: 1,
@@ -245,7 +245,7 @@ $(document).ready(function() {
 	}
 
 
-	var game_update_frequency = 500; //Milliseconds
+	var game_update_frequency = 5; //Milliseconds
 
 
 	/**************************************
@@ -907,6 +907,30 @@ $(document).ready(function() {
 		// Display different buildings
 		if (player_stats.purchased_buildings.dormitory == 1) {
 			$("#build1").show();
+		}
+		if (player_stats.purchased_buildings.MBC == 1) {
+			$("#build2").show();
+		}
+		if (player_stats.purchased_buildings.blusson == 1) {
+			$("#build3").show();
+		}
+		if (player_stats.purchased_buildings.SSC == 1) {
+			$("#build4").show();
+		}
+		if (player_stats.purchased_buildings.library == 1) {
+			$("#build5").show();
+		}
+		if (player_stats.purchased_buildings.SUB == 1) {
+			$("#build6").show();
+		}
+		if (player_stats.purchased_buildings.saywell == 1) {
+			$("#build7").show();
+		}
+		if (player_stats.purchased_buildings.ASB == 1) {
+			$("#build8").show();
+		}
+		if (player_stats.purchased_buildings.WMC == 1) {
+			$("#build9").show();
 		}
 	}
 	/**************************************
