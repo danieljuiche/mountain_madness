@@ -2,10 +2,10 @@ $(document).ready(function() {
 
 	// Initialized and current resources
 	var dirt = 100000000;
-	var wood = 1000000;
-	var stone = 1000000;
-	var metal = 1000000;
-	var students = 10000;
+	var wood = 000000;
+	var stone = 000000;
+	var metal = 000000;
+	var students = 0000;
 
 	var player_stats = {
 		dirt_per_click: 1,
@@ -63,7 +63,7 @@ $(document).ready(function() {
 
 	var upgrade_costs = {
 		workers: {
-			dirt: 100,
+			dirt: 250,
 			wood: 0,
 			stone: 0,
 			metal: 0
@@ -75,7 +75,7 @@ $(document).ready(function() {
 			metal: 0
 		},
 		slaves: {
-			dirt: 250,
+			dirt: 100,
 			wood: 0,
 			stone: 0,
 			metal: 0
@@ -245,7 +245,7 @@ $(document).ready(function() {
 	}
 
 
-	var game_update_frequency = 5; //Milliseconds
+	var game_update_frequency = 500; //Milliseconds
 
 
 	/**************************************
@@ -316,7 +316,7 @@ $(document).ready(function() {
 	$(".workers-passive").click(function() {
 		if (resource_purchase_check("workers")) {
 			resource_purchase_update("workers"); // Take away the resources to purchase the tool
-			player_stats.passive_dirt += 1; // Increase passive amount
+			player_stats.passive_dirt += 3; // Increase passive amount
 			player_stats.purchased_passives["workers"] += 1;
 			cost_increase("workers"); // Increase cost
 			update_resources(); // Update resources immediately
