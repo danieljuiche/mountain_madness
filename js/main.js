@@ -247,6 +247,22 @@ $(document).ready(function() {
 
 	var game_update_frequency = 500; //Milliseconds
 
+
+	/**************************************
+
+			Lightbox
+
+	***************************************/
+	$("#overlay").click(function() {
+		modal_off();
+	});
+	/**************************************
+
+			End Lightbox
+
+	***************************************/
+
+
 	/**************************************
 
 			Saving & Loading
@@ -690,6 +706,11 @@ $(document).ready(function() {
 			Helper Functions
 		    
 	***************************************/
+
+	// Function to toggle off intro
+	function modal_off() {
+		$("#overlay").addClass("hidden");
+	}
 
 	// Functions for adding resources
 	function resource_change(dirt_change, wood_change, stone_change, metal_change, students_change) {
