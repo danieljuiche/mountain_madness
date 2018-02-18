@@ -1,0 +1,83 @@
+// Mountain levels
+// Checks every game tick
+
+if (dirt_level < 100) {
+	// Flat ground
+}
+
+// Checks for Pile
+
+let pileAchieved = false
+
+if (!pileAchieved) {
+	if (dirt_level >= 100) {
+		// pop-up of “Mountain Level 1: Pile achieved”
+	}
+	pileAchieved = true
+}
+
+if (pileAchieved) {
+	// Show picture of pile
+}
+
+// checks for Heap
+
+let heapAchieved = false
+
+if (!heapAchieved) {
+	if (dirt_level >= 1000) {
+		// pop-up of “Mountain Level 2: Heap Achieved”
+	}
+	heapAchieved = true
+}
+
+if (heapAchieved) {
+	// Show picture of Heap
+}
+
+// checks for Mounds
+
+let moundAchieved = false
+
+if (!moundAchieved) {
+	if (dirt_level >= 10000) {
+		// pop-up of “Mountain Level 3: Mound Achieved”
+	}
+	moundAchieved = true
+}
+
+if (moundAchieved) {
+	// Show picture of Mound
+}
+
+// checks for Hills
+
+let hillAchieved = false
+
+if (!hillAchieved) {
+	if (dirt_level >= 100000) {
+		// pop-up of “Mountain Level 4: Hill Achieved”
+	}
+	hillAchieved = true
+}
+
+if (hillAchieved) {
+	// Show picture of Hill
+}
+
+// checks for Mountains
+
+let mountainAchieved = false
+
+if (!mountainAchieved) {
+	if (dirt_level >= 1000000) {
+		// pop-up of “Mountain Level 5: Mountain Achieved”
+	}
+	mountainAchieved = true
+}
+
+if (mountainAchieved) {
+	// Show picture of Mountain
+}
+
+

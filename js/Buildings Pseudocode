@@ -1,0 +1,34 @@
+// Pseudocode for Purchasing Buildings
+// Any test code is for testing purposes only
+
+let mountainAchieved = true; // test code
+let stone = 25000; // test code
+let wood = 20000; // test code
+let metal = 100; // test code
+
+let buildings = 0;
+
+if (mountainAchieved) {
+  if (stone >= 25000 && wood >= 20000 && metal >= 100 && true // test code
+  // Player clicked the "build button"
+  ) {
+    buildings += 1;
+    stone -= 25000;
+    wood -= 20000;
+    metal -= 100;
+  }
+}
+
+console.log(buildings); // test code
+
+// Creates a boolean that will become true if the player has 5 buildings
+
+buildings = 5; // test code
+
+let enoughBuildings = false;
+
+if (buildings >= 5) {
+  enoughBuildings = true;
+}
+
+console.log(enoughBuildings); // test code
