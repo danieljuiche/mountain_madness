@@ -487,19 +487,19 @@ $(document).ready(function() {
 		$("#ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
 
 		$(".upgrade-chainsaw").html("Chainsaw Upgrade (Level " + player_stats.purchased_upgrades.chainsaw +")");
+		$(".chainsaw-dirt").html("Cost: " + upgrade_costs.chainsaw.metal);
 		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Cost: 0" + player_stats.purchased_passives.ore_quarry);
 		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Cost: 0" + player_stats.purchased_passives.ore_quarry);
 		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Cost: 0" + player_stats.purchased_passives.ore_quarry);
 		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Cost: 0" + player_stats.purchased_passives.ore_quarry);
 		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Cost: 0"+ player_stats.purchased_passives.ore_quarry);
 		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Cost: 0" + player_stats.purchased_passives.ore_quarry);
 
 		$(".upgrade-bucket").html("Bucket Upgrade (Level " + player_stats.purchased_upgrades.bucket +")");
 		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
