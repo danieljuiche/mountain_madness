@@ -24,7 +24,6 @@ $(document).ready(function() {
 			rock_quarry: 0,
 			ore_quarry: 0
 		},
-
 		// Active upgrade levels
 		purchased_upgrades: {
 			buckets: 0,
@@ -486,6 +485,36 @@ $(document).ready(function() {
 		$("#forester").html("Forester Lv." + player_stats.purchased_passives.forester);
 		$("#rock_quarry").html("Rock Quarry Lv." + player_stats.purchased_passives.rock_quarry);
 		$("#ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+
+		$(".upgrade-chainsaw").html("Chainsaw Upgrade (Level " + player_stats.purchased_upgrades.chainsaw +")");
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+
+		$(".upgrade-bucket").html("Bucket Upgrade (Level " + player_stats.purchased_upgrades.bucket +")");
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
 
 		console.log("updating scoreboard");
 	}
