@@ -87,7 +87,7 @@ h1 {
 	position: relative;
     border: 5px solid black;
     padding: 5px;
-    background: white;
+    background: lightgreen;
     overflow: auto;
     height: 400px;
  	overflow-y: scroll;
@@ -137,7 +137,7 @@ h1 {
 	position: relative;
     border: 5px solid black;
     padding: 5px;
-    background: white;
+    background: lightgreen;
     overflow: auto;
     height: 200px;
  	overflow-y: scroll;
