@@ -1,5 +1,8 @@
 /* Css styling goes here */
 
+.no-bullets {
+	list-style-type: none;
+}
 
 
 .scrollable {
