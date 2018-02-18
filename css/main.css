@@ -185,7 +185,7 @@ img {
 	display: none;
 }
 #mountain5 {
-	display: none;
+	display: block;
 
 }
 
@@ -206,63 +206,64 @@ img {
 /* Positioning of buildings */
 
 #build1 {
-	bottom: 48.5%;
-	left: 22%;
+	top: 160px;
+	left: 40px;
 	display: block;
+	position: relative;
 }
 
 #build2 {
 	bottom: 48.5%;
 	left: 40%;
-	display: block;
+	display: none;
 }
 
 #build3 {
 	bottom: 48.5%;
 	left: 53%;
-	display: block;
+	display: none;
 }
 
 #build4 {
 	bottom: 48.5%;
 	left: 31%;
-	display: block;
+	display: none;
 }
 
 #build5 {
 	bottom: 48.5%;
 	left: 44%;
-	display: block;
+	display: none;
 }
 
 #build6 {
 	bottom: 48.5%;
 	left: 70%;
-	display: block;
+	display: none;
 }
 
 #build7 {
 	bottom: 48.5%;
 	left: 28%;
-	display: block;
+	display: none;
 }
 
 #build8 {
 	bottom: 48.5%;
 	left: 41%;
-	display: block;
+	display: none;
 }
 
 #build9 {
 	bottom: 48.5%;
 	left: 61%;
-	display: block;
+	display: none;
 }
 
 #build10 {
 	bottom: 48.5%;
 	left: 67%;
-	display: block;
+	display: none;
 }
 
 .text-container {
