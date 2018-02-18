@@ -723,9 +723,10 @@ $(document).ready(function() {
 
 	$(".col-raid").click(function() {
 		
+		resource_change(0,0,0,0,-100)
 		num = Math.round(Math.random());
 		if (students >= 100 && num ==1) {
-			resource_change(150000,0,0,0,-100);
+			resource_change(150000,0,0,0,0);
 		} 
 	});
 
