@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Initialized and current resources
-	var dirt = 100000;
+	var dirt = 1000000;
 	var wood = 10000;
 	var stone = 10000;
 	var metal = 10000;
@@ -835,6 +835,7 @@ $(document).ready(function() {
 
 		check_visuals();
 		display_visuals();
+		display_building_visuals();
 		// console.log("updating scoreboard");
 	}
 
@@ -898,6 +899,14 @@ $(document).ready(function() {
 			$("#mountain1").show();
 		} else {
 			$("#mountain0").show();
+		}
+	}
+
+	// Function to check building visuals
+	function display_building_visuals() {
+		// Display different buildings
+		if (player_stats.purchased_buildings.dormitory == 1) {
+			$("#build1").show();
 		}
 	}
 	/**************************************

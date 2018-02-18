@@ -38,7 +38,7 @@ p {
     right: 0;
     bottom: 0;
     background-color: rgba(50,75,150,0.5); /* Turqoise background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    z-index: 10000; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
 }
 
@@ -80,7 +80,9 @@ p {
 .relative {
 	position: relative;
 }
-
+.full-height {
+	height: 100%;
+}
 .hidden {
 	display: none !important;
 }
@@ -227,85 +229,94 @@ img {
 	display: none;
 }
 #mountain5 {
-	display: block;
+	display: none;
+	height: 100%;
 
 }
 
 /* Positioning of resources */
 #f-metal {
-	top: 23%;
-	left: 6%;
+    bottom: 23%;
+    left: 6%;
+    z-index: 1000;
 }
 #f-stone {
-	top: 3%;
-	left: 22%;
+	bottom: 45%;
+    left: 22%;
+    z-index: 1000;
 }
 #f-wood {
-	top: 15%;
-	left: 75%;
+    bottom: 32%;
+    left: 75%;
+    z-index: 1000;
 }
 
 /* Positioning of buildings */
+.img-building {
+	bottom: 0px;
+	display: none;
+	position: absolute;
+}
 
 #build1 {
-	top: 35%;
-	left: 30%;
-	display: block;
-	position: relative;
+	/*top: 35%;*/
+	left: 25%;
+	/*display: block;*/
+	/*position: relative;*/
 }
 
 #build2 {
-	bottom: 48.5%;
-	left: 40%;
-	display: none;
+	max-height: 250px;
+	left: 35%;
+	/*display: none;*/
 }
 
 #build3 {
-	bottom: 48.5%;
-	left: 53%;
-	display: none;
+	/*bottom: 48.5%;*/
+	left: 42%;
+	/*display: none;*/
 }
 
 #build4 {
-	bottom: 48.5%;
-	left: 31%;
-	display: none;
+	/*bottom: 48.5%;*/
+	left: 26%;
+	/*display: none;*/
 }
 
 #build5 {
-	bottom: 48.5%;
-	left: 44%;
-	display: none;
+	/*bottom: 48.5%;*/
+	left: 39%;
+	/*display: none;*/
 }
 
 #build6 {
-	bottom: 48.5%;
-	left: 70%;
-	display: none;
+	/*bottom: 48.5%;*/
+	left: 63%;
+	/*display: none;*/
 }
 
 #build7 {
-	bottom: 48.5%;
-	left: 28%;
-	display: none;
+	/*bottom: 48.5%;*/
+	left: 23%;
+	/*display: none;*/
 }
 
 #build8 {
-	bottom: 48.5%;
-	left: 41%;
-	display: none;
+	/*bottom: 48.5%;*/
+	left: 36%;
+	/*display: none;*/
 }
 
 #build9 {
-	bottom: 48.5%;
-	left: 61%;
-	display: none;
+	/*bottom: 48.5%;*/
+	left: 56%;
+	/*display: none;*/
 }
 
 #build10 {
-	bottom: 48.5%;
-	left: 67%;
-	display: none;
+	/*bottom: 48.5%;*/
+	left: 62%;
+	/*display: none;*/
 }
 
 .text-container {
@@ -314,4 +325,17 @@ img {
 
 #img-student {
 	height: 55px;
+}
+
+.top-part {
+	width: 100%;
+    height: 60%;
+    position: absolute;
+}
+
+.bottom-part {
+	width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0px;
 }
