@@ -478,6 +478,15 @@ $(document).ready(function() {
 		$(".passive-wood").html("Passive Wood Gain: " + player_stats.passive_wood);
 		$(".passive-stone").html("Passive Stone Gain: " + player_stats.passive_stone);
 		$(".passive-metal").html("Passive Metal Gain: " + player_stats.passive_metal);
+
+		//update passive levels
+		$("#workers").html("Workers Lv." + player_stats.purchased_passives.workers);
+		$("#vehicles").html("Vehicles Lv." + player_stats.purchased_passives.vehicles);
+		$("#slaves").html("Slaves Lv." + player_stats.purchased_passives.slaves);
+		$("#forester").html("Forester Lv." + player_stats.purchased_passives.forester);
+		$("#rock_quarry").html("Rock Quarry Lv." + player_stats.purchased_passives.rock_quarry);
+		$("#ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+
 		console.log("updating scoreboard");
 	}
 
