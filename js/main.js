@@ -583,7 +583,7 @@ $(document).ready(function() {
 		$(".sledgehammer-dirt").html("Cost: " + upgrade_costs.sledgehammer.wood + " Wood and " + upgrade_costs.sledgehammer.metal + " Metal");
 		$(".upgrade-dynamite").html("Dynamite Upgrade (Level " + player_stats.purchased_upgrades.dynamite +")");
 		$(".dynamite-dirt").html("Cost: " + upgrade_costs.dynamite.dirt + " Dirt");
-		$(".upgrade-drills").html("Drills Upgrade (Level " + player_stats.purchased_upgrades.drill +")");
+		$(".upgrade-drills").html("Drill Upgrade (Level " + player_stats.purchased_upgrades.drill +")");
 		$(".drills-dirt").html("Cost: " + upgrade_costs.drill.metal + " Metal");
 		$(".upgrade-minecarts").html("Minecart Upgrade (Level " + player_stats.purchased_upgrades.minecart +")");
 		$(".minecarts-dirt").html("Cost: " + upgrade_costs.minecart.metal + " Metal");
