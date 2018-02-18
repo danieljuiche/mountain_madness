@@ -1,5 +1,9 @@
 /* Css styling goes here */
 
+p {
+	font-family: Trebuchet MS;
+}
+
 /*Prevents highlighting of css elements*/
 .left-box:not(.scrollable) {
 	background-color: rgb(241, 236, 218);
