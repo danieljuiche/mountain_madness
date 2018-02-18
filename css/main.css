@@ -34,3 +34,8 @@
 .text-container {
 	border:1px solid black;
 }
+
+.object_pictures {
+	float:right;
+	width: 5em;
+}
