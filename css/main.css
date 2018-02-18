@@ -106,11 +106,12 @@ li {
 }
 .object_pictures {
 	position: absolute;
-	top: 25%;
+	top: 50%;
     right: 25px;
     margin-right: 0px;
     max-height: 100px;
     width: 65px;
+    transform: translateY(-50%);
 }
 
 .scrollable {
