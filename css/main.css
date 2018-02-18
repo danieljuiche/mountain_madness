@@ -85,6 +85,10 @@ h1 {
 .object_pictures {
 	margin-right:3em;
 	position: absolute;
+	top: 25%;
+    right: 25px;
+    margin-right: 0px;
+    height: 100px;
 }
 
 .scrollable {
@@ -279,9 +283,4 @@ img {
 
 .text-container {
 	border:1px solid black;
-}
-
-.object_pictures {
-	float:right;
-	width: 5em;
 }
