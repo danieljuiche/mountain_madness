@@ -1,174 +1,172 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta jusung-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <!-- Required meta jusung-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>   
-    <script type="text/javascript" src="js/main.js"></script>
-    
-    <!-- getting main.js variable -->
-    <script type=></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>   
+  <script type="text/javascript" src="js/main.js"></script>
 
-    <title>Game Name</title>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 left-box">
-          <h1 class="text-center">Mountain Madness</h1>
-          <div class="col-xs-12">
-            <div class="row">
-              <div class="col-sm-6">
-             <p class="text-center">Resources</p>
-             <ul class="no-bullets">
-              <li class="dirt-amount">Dirt: 0</li>
-              <li class="wood-amount">Wood: 0</li>
-              <li class="stone-amount">Stone: 0</li>
-              <li class="metal-amount">Metal: 0</li>
-              <li class="student-amount">Students: 0</li>
-             </ul>
-           </div>
-           <div class="col-sm-6">
-            <p class="text-center">Passive Gains</p>
-             <ul class="no-bullets">
-              <li class="passive-dirt">Dirt: 0</li>
-              <li class="passive-wood">Wood: 0</li>
-              <li class="passive-stone">Stone: 0</li>
-              <li class="passive-metal">Metal: 0</li>
-             </ul>
-           </div>
-         </div>
-             <button id="save">SAVE</button>
-             <button id="load">LOAD</button>
+  <!-- getting main.js variable -->
+  <script type=></script>
+
+  <title>Game Name</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 left-box">
+        <h1 class="text-center">Mountain Madness</h1>
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="text-center">Resources</p>
+              <ul class="no-bullets">
+                <li class="dirt-amount">Dirt: 0</li>
+                <li class="wood-amount">Wood: 0</li>
+                <li class="stone-amount">Stone: 0</li>
+                <li class="metal-amount">Metal: 0</li>
+                <li class="student-amount">Students: 0</li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <p class="text-center">Passive Gains</p>
+              <ul class="no-bullets">
+                <li class="passive-dirt">Dirt: 0</li>
+                <li class="passive-wood">Wood: 0</li>
+                <li class="passive-stone">Stone: 0</li>
+                <li class="passive-metal">Metal: 0</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-xs-12 scrollable box">
-              <p class="text-center">Upgrades</p>
-              <div class="text-container workers-passive">
-                <h1 id="workers">Workers LV. </h1>
-                <p>People work for collectin dirt <img class="object_pictures" src="" alt="workers picture"></p>
-                <p id="workers-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container vehicles-passive">
-                <h1 id="vehicles">Vehicles Lv.)</h1>
-                <p>A bunch of vehicles for transportation <img class="object_pictures" src="" alt="vehicles picture"></p>
-                <p id="vehicles-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container slaves-passive">
-                <h1 id="slaves">Slaves Lv.</h1>
-                <p>People collecting dirt. Not paid. <img class="object_pictures" src="" alt="slaves picture"></p>
-                <p id="slaves-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container forester-passive">
-                <h1 id="forester">Forester Lv.</h1>
-                <p>Collects wood <img class="object_pictures" src="" alt="lumberjack picture"></p>
-                <p id="forester-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container rock_quarry-passive">
-                <h1 id="rock_quarry">Rock Quarry Lv.</h1>
-                <p>An area with lots of stone <img class="object_pictures" src="" alt="rock_quarry picture"></p>
-                <p id="rock_quarry-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container ore_quarry">
-                <h1 id="ore_quarry">Ore Quarry Lv.</h1>
-                <p>An area with lots of ore <img class="object_pictures" src="" alt="ore_quarry"></p>
-                <p id="ore_quarry-dirt">Cost: 0 dirt</p>
-              </div>
+          <button id="save">SAVE</button>
+          <button id="load">LOAD</button>
+        </div>
+        <div class="col-xs-12 scrollable box">
+          <p class="text-center">Passive Upgrades</p>
+          <div class="text-container workers-passive">
+            <h1 id="workers">Workers LV. </h1>
+            <p>People work for collectin dirt <img class="object_pictures" src="" alt="workers picture"></p>
+            <p id="workers-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container vehicles-passive">
+            <h1 id="vehicles">Vehicles Lv.)</h1>
+            <p>A bunch of vehicles for transportation <img class="object_pictures" src="" alt="vehicles picture"></p>
+            <p id="vehicles-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container slaves-passive">
+            <h1 id="slaves">Slaves Lv.</h1>
+            <p>People collecting dirt. Not paid. <img class="object_pictures" src="" alt="slaves picture"></p>
+            <p id="slaves-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container forester-passive">
+            <h1 id="forester">Forester Lv.</h1>
+            <p>Collects wood <img class="object_pictures" src="" alt="lumberjack picture"></p>
+            <p id="forester-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container rock_quarry-passive">
+            <h1 id="rock_quarry">Rock Quarry Lv.</h1>
+            <p>An area with lots of stone <img class="object_pictures" src="" alt="rock_quarry picture"></p>
+            <p id="rock_quarry-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container ore_quarry">
+            <h1 id="ore_quarry">Ore Quarry Lv.</h1>
+            <p>An area with lots of ore <img class="object_pictures" src="" alt="ore_quarry"></p>
+            <p id="ore_quarry-dirt">Cost: 0 dirt</p>
+          </div>
 
 
 
-              <p class="text-center">Active Upgrades</p>
-              <div class="text-container buckets-upgrade">
-                <h1 class="upgrade-bucket">Buckets Upgrade (Level 1)</h1>
-                <p>A simple bucket for collecting dirt. <img class="object_pictures" src="./images/resources/bucket.png" alt="bucket"></p>
-                <p id="bucket-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container shovels-upgrade">
-                <h1 class="upgrade-shovel">Shovels Upgrade (Level 1)</h1>
-                <p>A simple shovel for collecting dirt.<img class="object_pictures" src="./images/resources/shovel.png" alt="shovel"></p>
-                <p id="shovel-dirt">Cost: 0 dirt</p>
-              </div>
-               <div class="text-container trucks-upgrade">
-                <h1 class="upgrade-truck">Trucks Upgrade (Level 1)</h1>
-                <p>A powerful truck for collecting dirt.<img class="object_pictures" src="./images/resources/thetruck.png" alt="truck"></p>
-                <p id="truck-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container excavators-upgrade">
-                <h1 class="upgrade-excavator">Excavator Upgrade (Level 1)</h1>
-                <p>A machine that excavates dirt.</p>
-                <p id="excavator-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container backhoes-upgrade">
-                <h1 class="upgrade-backhoe">Backhoe Upgrade (Level 1)</h1>
-                <p>A machine that shovels dirt.</p>
-                <p id="backhoe-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container axes-upgrade">
-                <h1 class="upgrade-axe">Axe Upgrade (Level 1)</h1>
-                <p>A simple axe for collecting wood.
-                  <img class="object_pictures" src="./images/resources/axe.png" alt="axe"></p>
-                <p id="axe-dirt">Cost: 0 dirt</p>
-              </div>
-              <div class="text-container hacksaws-upgrade">
-                <h1 class="upgrade-hacksaw">Hacksaw Upgrade (Level 1)</h1>
-                <p>A saw for sawing wood.
-                  <img class="object_pictures" src="./images/resources/hacksaw.png" alt="hacksaw"></p>
+          <p class="text-center">Active Upgrades</p>
+          <div class="text-container buckets-upgrade">
+            <h1 class="upgrade-bucket">Buckets Upgrade (Level 1)</h1>
+            <p>A simple bucket for collecting dirt. <img class="object_pictures" src="./images/resources/bucket.png" alt="bucket"></p>
+            <p id="bucket-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container shovels-upgrade">
+            <h1 class="upgrade-shovel">Shovels Upgrade (Level 1)</h1>
+            <p>A simple shovel for collecting dirt.<img class="object_pictures" src="./images/resources/shovel.png" alt="shovel"></p>
+            <p id="shovel-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container trucks-upgrade">
+            <h1 class="upgrade-truck">Trucks Upgrade (Level 1)</h1>
+            <p>A powerful truck for collecting dirt.<img class="object_pictures" src="./images/resources/thetruck.png" alt="truck"></p>
+            <p id="truck-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container excavators-upgrade">
+            <h1 class="upgrade-excavator">Excavator Upgrade (Level 1)</h1>
+            <p>A machine that excavates dirt.</p>
+            <p id="excavator-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container backhoes-upgrade">
+            <h1 class="upgrade-backhoe">Backhoe Upgrade (Level 1)</h1>
+            <p>A machine that shovels dirt.</p>
+            <p id="backhoe-dirt">Cost: 0 dirt</p>
+          </div>
+          <div class="text-container axes-upgrade">
+            <h1 class="upgrade-axe">Axe Upgrade (Level 1)</h1>
+            <p>A simple axe for collecting wood.
+              <img class="object_pictures" src="./images/resources/axe.png" alt="axe"></p>
+              <p id="axe-dirt">Cost: 0 dirt</p>
+            </div>
+            <div class="text-container hacksaws-upgrade">
+              <h1 class="upgrade-hacksaw">Hacksaw Upgrade (Level 1)</h1>
+              <p>A saw for sawing wood.
+                <img class="object_pictures" src="./images/resources/hacksaw.png" alt="hacksaw"></p>
                 <p id="hacksaw-dirt">Cost: 0 dirt</p>
               </div>
-              
-
               <div class="text-container chainsaws-upgrade">
                 <h1 class="upgrade-chainsaw">Chainsaw Upgrade (Level 1)</h1>
                 <p>An automated saw for collecting wood.
                   <img class="object_pictures" src="./images/resources/chainsaw.png" alt="chainsaw"></p>
-                <p class="chainsaw-dirt">Cost: 0 dirt</p>
-              </div>
-                            <div class="text-container pickaxes-upgrade">
-                <h1 class="upgrade-pickaxes">Pickaxe Upgrade (Level 1)</h1>
-                <p>A simple pickaxe for collecting stone.
-                  <img class="object_pictures" src="./images/resources/pickaxe.png" alt="pickaxe"></p>
-                <p class="pickaxes-dirt">Cost: 0 dirt</p>
-              </div>
-                            <div class="text-container sledgehammers-upgrade">
-                <h1 class="upgrade-sledgehammers">Sledgehammer Upgrade (Level 1)</h1>
-                <p>A sledgehammer to break up stone.
-                  <img class="object_pictures" src="./images/resources/sledgehammer.png" alt="sledgehammer"></p>
-                <p class="sledgehammer-dirt">Cost: 0 dirt</p>
-              </div>
-                            <div class="text-container dynamites-upgrade">
-                <h1 class="upgrade-dynamite">Dynamite Upgrade (Level 1)</h1>
-                <p>Blows up stone.</p>
-                <p class="dynamite-dirt">Cost: 0 dirt</p>
-              </div>
-                            <div class="text-container drills-upgrade">
-                <h1 class="upgrade-drills">Drill Upgrade (Level 1)</h1>
-                <p>A simple drill for collecting metal.
-                  <img class="object_pictures" src="./images/resources/drill.png" alt="drill"></p>
-                <p class="drills-dirt">Cost: 0 dirt</p>
-              </div>
-                            <div class="text-container minecarts-upgrade">
-                <h1 class="upgrade-minecarts">Minecart Upgrade (Level 1)</h1>
-                <p>A cart for metal.</p>
-                <p class="minecarts-dirt">Cost: 0 dirt</p>
-              </div>
-                            <div class="text-container extractors-upgrade">
-                <h1 class="upgrade-extractors">Extractor Upgrade (Level 1)</h1>
-                <p>Collects metal at an incredible rate.</p>
-                <p class="extractors-dirt">Cost: 0 dirt</p>
-              </div>
-                            <div class="text-container students-purchase">
-                <h1 class="upgrade-students">Buy Student (Level 1)</h1>
-                <p>Can do various tasks.
-                  <img class="object_pictures" src="./images/resources/student.png" alt="student"></p>
-                <p class="students-dirt">Cost: 0 dirt</p>
-              </div>
+                  <p class="chainsaw-dirt">Cost: 0 dirt</p>
+                </div>
+                <div class="text-container pickaxes-upgrade">
+                  <h1 class="upgrade-pickaxes">Pickaxe Upgrade (Level 1)</h1>
+                  <p>A simple pickaxe for collecting stone.
+                    <img class="object_pictures" src="./images/resources/pickaxe.png" alt="pickaxe"></p>
+                    <p class="pickaxes-dirt">Cost: 0 dirt</p>
+                  </div>
+                  <div class="text-container sledgehammers-upgrade">
+                    <h1 class="upgrade-sledgehammers">Sledgehammer Upgrade (Level 1)</h1>
+                    <p>A sledgehammer to break up stone.
+                      <img class="object_pictures" src="./images/resources/sledgehammer.png" alt="sledgehammer"></p>
+                      <p class="sledgehammer-dirt">Cost: 0 dirt</p>
+                    </div>
+                    <div class="text-container dynamites-upgrade">
+                      <h1 class="upgrade-dynamite">Dynamite Upgrade (Level 1)</h1>
+                      <p>Blows up stone.</p>
+                      <p class="dynamite-dirt">Cost: 0 dirt</p>
+                    </div>
+                    <div class="text-container drills-upgrade">
+                      <h1 class="upgrade-drills">Drill Upgrade (Level 1)</h1>
+                      <p>A simple drill for collecting metal.
+                        <img class="object_pictures" src="./images/resources/drill.png" alt="drill"></p>
+                        <p class="drills-dirt">Cost: 0 dirt</p>
+                      </div>
+                      <div class="text-container minecarts-upgrade">
+                        <h1 class="upgrade-minecarts">Minecart Upgrade (Level 1)</h1>
+                        <p>A cart for metal.</p>
+                        <p class="minecarts-dirt">Cost: 0 dirt</p>
+                      </div>
+                      <div class="text-container extractors-upgrade">
+                        <h1 class="upgrade-extractors">Extractor Upgrade (Level 1)</h1>
+                        <p>Collects metal at an incredible rate.</p>
+                        <p class="extractors-dirt">Cost: 0 dirt</p>
+                      </div>
+                      <div class="text-container students-purchase">
+                        <h1 class="upgrade-students">Buy Student (Level 1)</h1>
+                        <p>Can do various tasks.
+                          <img class="object_pictures" src="./images/resources/student.png" alt="student"></p>
+                          <p class="students-dirt">Cost: 0 dirt</p>
+                        </div>
               <!-- <ul class="upgrade-container no-bullets">
                 <li class="buckets-upgrade">Bucket Upgrade</li>
                 <li class="shovels-upgrade">Shovel Upgrade</li>
@@ -185,52 +183,50 @@
                 <li class="extractors-upgrade">Extractor Upgrade</li>
                 <li class="students-purchase">Buy Students</li>
               </ul> -->
-          </div>
-          <div class="col-xs-12">
+            </div>
+            <div class="col-xs-12">
               <p class="text-center box">Skill bar</p>
+            </div>
           </div>
-        </div>
 
-        <div id="play-area" class="col-md-6">
-          <h1 class="text-center">RIGHT SIDE</h1>
-          <div class="div-wrapper relative">
+          <div id="play-area" class="col-md-6">
+            <h1 class="text-center">RIGHT SIDE</h1>
+            <div class="div-wrapper relative">
 
               <!--Clickable resources images-->
-              <img id="f-stone" src="images/areas to farm/for_stone.png">
-              <img id="f-wood" src="images/areas to farm/for_wood.png">
-              <img id="f-metal" src="images/areas to farm/for_metal.png">
+              <img class="noSelect" id="f-stone" src="images/areas to farm/for_stone.png">
+              <img class="noSelect" id="f-wood" src="images/areas to farm/for_wood.png">
+              <img class="noSelect" id="f-metal" src="images/areas to farm/for_metal.png">
 
-            <!-- Mountain stages images -->
-              <img class = "mountain" id = "mountain0" src="images/mountain stages/mountain0.png">
-              <img class = "mountain" id = "mountain1" src="images/mountain stages/mountain1.png">
-              <img class = "mountain" id = "mountain2" src="images/mountain stages/mountain2.png">
-              <img class = "mountain" id = "mountain3" src="images/mountain stages/mountain3.png">
-              <img class = "mountain" id = "mountain4" src="images/mountain stages/mountain4.png">
-              <div class="center">
-              <img class = "mountain" id = "mountain5" src="images/mountain stages/mountain5.png">
-              </div>
+              <!-- Mountain stages images -->
+              <div class="center"><img class = "noSelect mountain" id = "mountain0" src="images/mountain stages/mountain0.png"></div>
+              <div class="center"><img class = "noSelect mountain" id = "mountain1" src="images/mountain stages/mountain1.png"></div>
+              <div class="center"><img class = "noSelect mountain" id = "mountain2" src="images/mountain stages/mountain2.png"></div>
+              <div class="center"><img class = "noSelect mountain" id = "mountain3" src="images/mountain stages/mountain3.png"></div>
+              <div class="center"><img class = "noSelect mountain" id = "mountain4" src="images/mountain stages/mountain4.png"></div>
+              <div class="center"><img class = "noSelect mountain" id = "mountain5" src="images/mountain stages/mountain5.png"></div>
 
-            <!--University-->
-              <img class = "mountain" id="build1" src="images/buildings/build1.png">
-              <img id="build2" src="images/buildings/build2.png">
-              <img id="build3" src="images/buildings/build3.png">
-              <img id="build4" src="images/buildings/build4.png">
-              <img id="build5" src="images/buildings/build5.png">
-              <img id="build6" src="images/buildings/build6.png">
-              <img id="build7" src="images/buildings/build7.png">
-              <img id="build8" src="images/buildings/build8.png">
-              <img id="build9" src="images/buildings/build9.png">
-              <img id="build10" src="images/buildings/build10.png">
+              <!--University-->
+              <img class="noSelect" id="build1" src="images/buildings/build1.png">
+              <img class="noSelect" id="build2" src="images/buildings/build2.png">
+              <img class="noSelect" id="build3" src="images/buildings/build3.png">
+              <img class="noSelect" id="build4" src="images/buildings/build4.png">
+              <img class="noSelect" id="build5" src="images/buildings/build5.png">
+              <img class="noSelect" id="build6" src="images/buildings/build6.png">
+              <img class="noSelect" id="build7" src="images/buildings/build7.png">
+              <img class="noSelect" id="build8" src="images/buildings/build8.png">
+              <img class="noSelect" id="build9" src="images/buildings/build9.png">
+              <img class="noSelect" id="build10" src="images/buildings/build10.png">
 
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
-</html>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+    </html>
