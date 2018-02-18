@@ -27,6 +27,10 @@
 	list-style-type: none;
 }
 
+.object_pictures {
+	margin-right:3em;
+}
+
 .scrollable {
 	position: relative;
     border: 5px solid black;
@@ -35,12 +39,59 @@
     overflow: auto;
     height: 600px;
  	overflow-y: scroll;
+ 	border-radius: 25px 25px 25px 25px;
+}
+
+.round {
+	border-radius: 25px 25px 25px 25px;
+}
+
+.button-group {
+	display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.button {
+	position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    margin-bottom: 0.2em
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    font:11px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    -moz-background-clip: padding; /* for Firefox 3.6 */
+    background-clip: padding-box;
+    border-radius: 0.2em;
 }
 
 .left-box {
 	border: 2px solid black;
 	width: 960px;
     margin: 0 auto; 
+}
+
+.text-container {
+	border-radius: 25px;
+	padding-left: 1em;
+}
+
+.scroll-title {
+	padding-top: .5em;
+	font-weight: bold;
 }
 
 .box {
