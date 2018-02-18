@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Initialized and current resources
-	var dirt = 100000000;
+	var dirt = 00000000;
 	var wood = 000000;
 	var stone = 000000;
 	var metal = 000000;
