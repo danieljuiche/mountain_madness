@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Initialized and current resources
-	var dirt = 100000;
+	var dirt = 1;
 	var wood = 10000;
 	var stone = 10000;
 	var metal = 10000;
@@ -39,6 +39,14 @@ $(document).ready(function() {
 			drill: 0,
 			minecart: 0,
 			extractor: 0,
+		},
+		dirt_mound_level: {
+			"0": 1,
+			"1": 0,
+			"2": 0,
+			"3": 0,
+			"4": 0,
+			"5": 0
 		}
 	}
 
@@ -578,6 +586,8 @@ $(document).ready(function() {
 		$(".upgrade-students").html("Students Upgrade (Level " + students +")");
 		$(".students-dirt").html("Cost: " + upgrade_costs.students.dirt + " Dirt");
 
+		check_visuals();
+		display_visuals();
 		// console.log("updating scoreboard");
 	}
 
@@ -610,10 +620,39 @@ $(document).ready(function() {
 
 	// Function to check for visual effects
 	function check_visuals() {
-
-
+		// Set switches for dirt mound heights
+		if (dirt >= 1000000) {
+			player_stats.dirt_mound_level["5"] = 1;
+		} else if (dirt >= 100000) {
+			player_stats.dirt_mound_level["4"] = 1;
+		} else if (dirt >= 10000) {
+			player_stats.dirt_mound_level["3"] = 1;
+		} else if (dirt >= 1000) {
+			player_stats.dirt_mound_level["2"] = 1;
+		} else if (dirt >= 100) {
+			player_stats.dirt_mound_level["1"] = 1;
+		} else {
+			// Do nothing
+		}
 	}
 
+	// Function to display visuals
+	function display_visuals() {
+		// Display different dirt mound heights
+		if (player_stats.dirt_mound_level["5"] == 1) {
+			$("#mountain5").show();
+		} else if (player_stats.dirt_mound_level["4"] == 1) {
+			$("#mountain4").show();
+		} else if (player_stats.dirt_mound_level["3"] == 1) {
+			$("#mountain3").show();
+		} else if (player_stats.dirt_mound_level["2"] == 1) {
+			$("#mountain2").show();
+		} else if (player_stats.dirt_mound_level["1"] == 1) {
+			$("#mountain1").show();
+		} else {
+			$("#mountain0").show();
+		}
+	}
 	/**************************************
 
 			End Helper Functions
