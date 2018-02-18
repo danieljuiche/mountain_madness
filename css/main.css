@@ -247,15 +247,24 @@ img {
     left: 6%;
     z-index: 1000;
 }
+#f-metal.clicked {
+	bottom: 24%;
+}
 #f-stone {
 	bottom: 45%;
     left: 22%;
     z-index: 1000;
 }
+#f-stone.clicked{
+	bottom: 46%;
+}
 #f-wood {
     bottom: 32%;
     left: 75%;
     z-index: 1000;
+}
+#f-wood.clicked{
+	bottom: 33%;
 }
 
 /* Positioning of buildings */

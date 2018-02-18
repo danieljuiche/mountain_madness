@@ -737,15 +737,43 @@ $(document).ready(function() {
 		resource_change(-1, 0,player_stats.stone_per_click,0,0);
 		update_resources();
 	});
+	$("#f-stone").mousedown(function(){
+		$(this).addClass("clicked");
+	});
+	$("#f-stone").mouseup(function(){
+		$(this).removeClass("clicked");
+	});
+	$("#f-stone").mouseout(function(){
+		$(this).removeClass("clicked");
+	});
 
 	$("#f-wood").click(function() {
 		resource_change(-1, player_stats.wood_per_click,0,0,0);
 		update_resources();
 	});
 
+	$("#f-wood").mousedown(function(){
+		$(this).addClass("clicked");
+	});
+	$("#f-wood").mouseup(function(){
+		$(this).removeClass("clicked");
+	});
+	$("#f-wood").mouseout(function(){
+		$(this).removeClass("clicked");
+	});
+
 	$("#f-metal").click(function() {
 		resource_change(-1, 0,0,player_stats.metal_per_click,0);
 		update_resources();
+	});
+	$("#f-metal").mousedown(function(){
+		$(this).addClass("clicked");
+	});
+	$("#f-metal").mouseup(function(){
+		$(this).removeClass("clicked");
+	});
+	$("#f-metal").mouseout(function(){
+		$(this).removeClass("clicked");
 	});
 
 	/**************************************
