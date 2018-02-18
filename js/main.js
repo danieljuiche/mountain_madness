@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Initialized and current resources
-	var dirt = 0;
+	var dirt = 10000;
 	var wood = 0;
 	var stone = 0;
 	var metal = 0;
@@ -99,7 +99,7 @@ $(document).ready(function() {
 			metal: 0
 		},
 		excavator: {
-			dirt: 100,
+			dirt: 10000,
 			wood: 0,
 			stone: 0,
 			metal: 0
@@ -134,7 +134,7 @@ $(document).ready(function() {
 			stone: 0,
 			metal: 5
 		},
-		pickaxe: {
+		sledgehammer: {
 			dirt: 0,
 			wood: 150,
 			stone: 0,
@@ -145,14 +145,31 @@ $(document).ready(function() {
 			wood: 0,
 			stone: 0,
 			metal: 0
+		},
+		drill: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 60
+		},
+		minecart: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 1500
+		},
+		extractor: {
+			dirt: 0,
+			wood: 0,
+			stone: 0,
+			metal: 5000
+		},
+		students: {
+			dirt: 1000,
+			wood: 0,
+			stone: 0,
+			metal: 0
 		}
-		/*
-
-
-			NEED TO ADD IN DRILLS
-
-
-		*/
 	}
 
 
@@ -294,8 +311,124 @@ $(document).ready(function() {
 		}
 	});
 
+	$(".backhoes-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("backhoe")) {
+			resource_purchase_update("backhoe"); // Take away the resources to purchase the tool
+			player_stats.dirt_per_click += 100; // Increase click amount
+			player_stats.purchased_upgrades["backhoe"] += 1;
+			cost_increase("backhoe"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
 
+	$(".axe-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("axe")) {
+			resource_purchase_update("axe"); // Take away the resources to purchase the tool
+			player_stats.wood_per_click += 1; // Increase click amount
+			player_stats.purchased_upgrades["axe"] += 1;
+			cost_increase("axe"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
 
+	$(".hacksaws-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("hacksaw")) {
+			resource_purchase_update("hacksaw"); // Take away the resources to purchase the tool
+			player_stats.wood_per_click += 5; // Increase click amount
+			player_stats.purchased_upgrades["hacksaw"] += 1;
+			cost_increase("hacksaw"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".chainsaws-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("chainsaw")) {
+			resource_purchase_update("chainsaw"); // Take away the resources to purchase the tool
+			player_stats.wood_per_click += 15; // Increase click amount
+			player_stats.purchased_upgrades["chainsaw"] += 1;
+			cost_increase("chainsaw"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".pickaxe-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("pickaxe")) {
+			resource_purchase_update("pickaxe"); // Take away the resources to purchase the tool
+			player_stats.stone_per_click += 1; // Increase click amount
+			player_stats.purchased_upgrades["pickaxe"] += 1;
+			cost_increase("pickaxe"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".sledgehammers-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("sledgehammer")) {
+			resource_purchase_update("sledgehammer"); // Take away the resources to purchase the tool
+			player_stats.stone_per_click += 5; // Increase click amount
+			player_stats.purchased_upgrades["sledgehammer"] += 1;
+			cost_increase("sledgehammer"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".dynamites-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("dynamite")) {
+			resource_purchase_update("dynamite"); // Take away the resources to purchase the tool
+			player_stats.stone_per_click += 25; // Increase click amount
+			player_stats.purchased_upgrades["dynamite"] += 1;
+			cost_increase("dynamite"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".drills-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("drill")) {
+			resource_purchase_update("drill"); // Take away the resources to purchase the tool
+			player_stats.metal_per_click += 3; // Increase click amount
+			player_stats.purchased_upgrades["drill"] += 1;
+			cost_increase("drill"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".minecarts-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("minecart")) {
+			resource_purchase_update("minecart"); // Take away the resources to purchase the tool
+			player_stats.metal_per_click += 15; // Increase click amount
+			player_stats.purchased_upgrades["minecart"] += 1;
+			cost_increase("minecart"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".extractors-upgrade").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("extractor")) {
+			resource_purchase_update("extractor"); // Take away the resources to purchase the tool
+			player_stats.metal_per_click += 50; // Increase click amount
+			player_stats.purchased_upgrades["extractor"] += 1;
+			cost_increase("extractor"); // Increase cost
+			update_resources(); // Update resources immediately
+		}
+	});
+
+	$(".students-purchase").click(function () {
+		// Check to see if the player has enough resources to purchase the tool
+		if (resource_purchase_check("students")) {
+			resource_purchase_update("students"); // Take away the resources to purchase the tool
+			students += 1;
+			update_resources(); // Update resources immediately
+		}
+	});
 
 	// Functions for adding resources
 	function resource_change(dirt_change, wood_change, stone_change, metal_change, students_change) {
@@ -313,7 +446,7 @@ $(document).ready(function() {
 		$(".stone-amount").html("Stone: " + stone);
 		$(".metal-amount").html("Metal: " + metal);
 		$(".students-amount").html("Students: " + students);
-		console.log("updating scoreboard");
+		// console.log("updating scoreboard");
 	}
 
 	// Function for checking to see if the player has enough resources to purchase active upgrades
