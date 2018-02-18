@@ -1,28 +1,58 @@
 $(document).ready(function() {
 
-	// Initialized variables
+	// Initialized and current resources
 	var dirt = 0;
 	var wood = 0;
 	var stone = 0;
 	var metal = 0;
 	var students = 0;
-	
+
+	var player_stats = {
+		dirt_per_click: 1,
+		wood_per_click: 1,
+		stone_per_click: 1,
+		metal_per_click: 1,
+		purchased_passives: {
+			dirt_level: 0,
+			wood_level: 0,
+			stone_level: 0,
+			metal_level: 0
+		}
+	}
+
+	var game_update_frequency = 500; //Milliseconds
 
 	// Object for active skills
 
-	// Object to keep track of our passives
+	// Active upgrade information
+	// var active_upgrades = {
+	// 	dirt: {
+	// 		costs: {
+	// 			level_1: 10 
+	// 		}
+	// 		benefits:
+	// 		description:
+	// 	}
+
+	// }
 
 
 	// Upgrades
 
-	// Game loop
+	// Main game loop
+
+	setInterval(function(){ 
+		if (1) {
+			resource_change(10,10,10,10,10);
+		}
+
+		update_resources();
+	}, game_update_frequency);
 
 
 	// Play area clicking
 	$("#play-area").click(function() {
-		resource_change(10,1,1,1,1);
-		console.log(dirt);
-		console.log(students);
+		resource_change(player_stats.dirt_per_click, 0, 0, 0, 0);
 		update_resources();
 	});
 
