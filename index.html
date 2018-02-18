@@ -13,6 +13,10 @@
 
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>   
     <script type="text/javascript" src="js/main.js"></script>
+    
+    <!-- getting main.js variable -->
+    <script type=></script>
+
     <title>Game Name</title>
   </head>
   <body>
@@ -21,6 +25,8 @@
         <div class="col-md-6 left-box">
           <h1 class="text-center">Mountain Madness</h1>
           <div class="col-xs-12">
+            <div class="row">
+              <div class="col-sm-6">
              <p class="text-center">Resources</p>
              <ul class="no-bullets">
               <li class="dirt-amount">Dirt: 0</li>
@@ -29,42 +35,105 @@
               <li class="metal-amount">Metal: 0</li>
               <li class="student-amount">Students: 0</li>
              </ul>
+           </div>
+           <div class="col-sm-6">
+            <p class="text-center">Passive Gains</p>
              <ul class="no-bullets">
-              <p class="text-center">Passive Gains</p>
-              <li class="passive-dirt">Passive Dirt Gain: 0</li>
-              <li class="passive-wood">Passive Wood Gain: 0</li>
-              <li class="passive-stone">Passive Stone Gain: 0</li>
-              <li class="passive-metal">Passive Metal Gain: 0</li>
+              <li class="passive-dirt">Dirt: 0</li>
+              <li class="passive-wood">Wood: 0</li>
+              <li class="passive-stone">Stone: 0</li>
+              <li class="passive-metal">Metal: 0</li>
              </ul>
+           </div>
+         </div>
+             <button id="save">SAVE</button>
+             <button id="load">LOAD</button>
           </div>
           <div class="col-xs-12 scrollable box">
               <p class="text-center">Upgrades</p>
-              <button id="workers">workers</button>
-              <button id="vehicles">vehicles</button>
-              <button id="slaves">slaves</button>
-              <button id="forester">forester</button>
-              <button id="rock_quarry">rock Quarry</button>
-              <button id="ore_quarry">ore quarry</button>
+              <button id="workers">Workers Lv.0</button>
+              <button id="vehicles">Vehicles</button>
+              <button id="slaves">Slaves</button>
+              <button id="forester">Forester</button>
+              <button id="rock_quarry">Rock Quarry</button>
+              <button id="ore_quarry">Ore Quarry</button>
               <p class="text-center">Active Upgrades</p>
               <div class="text-container buckets-upgrade">
-                <h1 class="upgrade-title">Bucket Upgrade (Level 1)</h1>
+                <h1 class="upgrade-bucket">Buckets Upgrade (Level 1)</h1>
                 <p>A simple bucket for collecting dirt.</p>
-                <p>Cost: 0 dirt</p>
+                <p id="bucket-dirt">Cost: 0 dirt</p>
               </div>
-                            <div class="text-container buckets-upgrade">
-                <h1 class="upgrade-title">Bucket Upgrade (Level 1)</h1>
-                <p>A simple bucket for collecting dirt.</p>
-                <p>Cost: 0 dirt</p>
+              <div class="text-container shovels-upgrade">
+                <h1 class="upgrade-shovel">Shovels Upgrade (Level 1)</h1>
+                <p>A simple shovel for collecting dirt.</p>
+                <p id="shovel-dirt">Cost: 0 dirt</p>
               </div>
-                            <div class="text-container buckets-upgrade">
-                <h1 class="upgrade-title">Bucket Upgrade (Level 1)</h1>
-                <p>A simple bucket for collecting dirt.</p>
-                <p>Cost: 0 dirt</p>
+               <div class="text-container trucks-upgrade">
+                <h1 class="upgrade-truck">Trucks Upgrade (Level 1)</h1>
+                <p>A powerful truck for collecting dirt.</p>
+                <p id="truck-dirt">Cost: 0 dirt</p>
               </div>
-                            <div class="text-container pickaxe-upgrade">
-                <h1 class="upgrade-title">Bucket Upgrade (Level 1)</h1>
-                <p>A simple bucket for collecting dirt.</p>
-                <p>Cost: 0 dirt</p>
+              <div class="text-container excavators-upgrade">
+                <h1 class="upgrade-excavator">Excavator Upgrade (Level 1)</h1>
+                <p>A machine that excavates dirt.</p>
+                <p id="excavator-dirt">Cost: 0 dirt</p>
+              </div>
+              <div class="text-container backhoes-upgrade">
+                <h1 class="upgrade-backhoe">Backhoe Upgrade (Level 1)</h1>
+                <p>A machine that shovels dirt.</p>
+                <p id="backhoe-dirt">Cost: 0 dirt</p>
+              </div>
+              <div class="text-container axes-upgrade">
+                <h1 class="upgrade-axe">Axe Upgrade (Level 1)</h1>
+                <p>A simple axe for collecting wood.</p>
+                <p id="axe-dirt">Cost: 0 dirt</p>
+              </div>
+              <div class="text-container hacksaws-upgrade">
+                <h1 class="upgrade-hacksaw">Hacksaw Upgrade (Level 1)</h1>
+                <p>A saw for sawing wood.</p>
+                <p id="hacksaw-dirt">Cost: 0 dirt</p>
+              </div>
+              
+
+              <div class="text-container chainsaws-upgrade">
+                <h1 class="upgrade-chainsaw">Chainsaw Upgrade (Level 1)</h1>
+                <p>An automated saw for collecting wood.</p>
+                <p class="chainsaw-dirt">Cost: 0 dirt</p>
+              </div>
+                            <div class="text-container pickaxes-upgrade">
+                <h1 class="upgrade-pickaxes">Pickaxe Upgrade (Level 1)</h1>
+                <p>A simple pickaxe for collecting stone.</p>
+                <p class="pickaxes-dirt">Cost: 0 dirt</p>
+              </div>
+                            <div class="text-container sledgehammers-upgrade">
+                <h1 class="upgrade-sledgehammers">Sledgehammer Upgrade (Level 1)</h1>
+                <p>A sledgehammer to break up stone.</p>
+                <p class="sledgehammer-dirt">Cost: 0 dirt</p>
+              </div>
+                            <div class="text-container dynamites-upgrade">
+                <h1 class="upgrade-dynamite">Dynamite Upgrade (Level 1)</h1>
+                <p>Blows up stone.</p>
+                <p class="dynamite-dirt">Cost: 0 dirt</p>
+              </div>
+                            <div class="text-container drills-upgrade">
+                <h1 class="upgrade-drills">Drill Upgrade (Level 1)</h1>
+                <p>A simple drill for collecting metal.</p>
+                <p class="drills-dirt">Cost: 0 dirt</p>
+              </div>
+                            <div class="text-container minecarts-upgrade">
+                <h1 class="upgrade-minecarts">Minecart Upgrade (Level 1)</h1>
+                <p>A cart for metal.</p>
+                <p class="minecarts-dirt">Cost: 0 dirt</p>
+              </div>
+                            <div class="text-container extractors-upgrade">
+                <h1 class="upgrade-extractors">Extractor Upgrade (Level 1)</h1>
+                <p>Collects metal at an incredible rate.</p>
+                <p class="extractors-dirt">Cost: 0 dirt</p>
+              </div>
+                            <div class="text-container students-purchase">
+                <h1 class="upgrade-students">Buy Student (Level 1)</h1>
+                <p>Can do various tasks.</p>
+                <p class="students-dirt">Cost: 0 dirt</p>
               </div>
               <!-- <ul class="upgrade-container no-bullets">
                 <li class="buckets-upgrade">Bucket Upgrade</li>

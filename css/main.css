@@ -161,17 +161,6 @@ img {
 	display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.text-container {
+	border:1px solid black;
+}

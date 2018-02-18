@@ -24,11 +24,10 @@ $(document).ready(function() {
 			rock_quarry: 0,
 			ore_quarry: 0
 		},
-
-		// Active upgrade levels
 		purchased_upgrades: {
-			buckets: 0,
-			shovels: 0,
+			buckets: 0, 
+			shovels: 0, 
+			trucks: 0, // added "trucks" variable
 			excavator: 0,
 			backhoe: 0,
 			axe: 0,
@@ -39,7 +38,7 @@ $(document).ready(function() {
 			dynamite: 0,
 			drill: 0,
 			minecart: 0,
-			x: 0,
+			extractor: 0, // changed from "x"
 		}
 	}
 
@@ -172,7 +171,51 @@ $(document).ready(function() {
 		}
 	}
 
+
 	var game_update_frequency = 500; //Milliseconds
+
+	/**************************************
+
+			Saving & Loading
+
+	***************************************/
+
+	function save_game() {
+		var save_file = {
+			dirt: dirt,
+			wood: wood,
+			stone: stone,
+			metal: metal,
+			students: students,
+			player_statistics: player_stats,
+			upgrade_costs: upgrade_costs,
+		}
+		localStorage.setItem("save",JSON.stringify(save_file));
+	}
+
+	$("#save").click(function(){
+		save_game();
+	});
+
+	$("#load").click(function(){
+		var load_file = JSON.parse(localStorage.getItem("save"));
+		if (typeof load_file !== "undefined") {
+			dirt = load_file.dirt;
+			wood = load_file.wood;
+			stone = load_file.stone;
+			metal = load_file.metal;
+			students = load_file.students;
+			player_stats = load_file.player_statistics;
+			upgrade_costs = load_file.upgrade_costs;
+		}
+		update_resources();
+	});
+
+	/**************************************
+
+			End Saving & Loading
+
+	***************************************/
 
 	/**************************************
 
@@ -319,7 +362,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".axe-upgrade").click(function () {
+	$(".axes-upgrade").click(function () {
 		// Check to see if the player has enough resources to purchase the tool
 		if (resource_purchase_check("axe")) {
 			resource_purchase_update("axe"); // Take away the resources to purchase the tool
@@ -352,7 +395,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".pickaxe-upgrade").click(function () {
+	$(".pickaxes-upgrade").click(function () {
 		// Check to see if the player has enough resources to purchase the tool
 		if (resource_purchase_check("pickaxe")) {
 			resource_purchase_update("pickaxe"); // Take away the resources to purchase the tool
@@ -360,6 +403,7 @@ $(document).ready(function() {
 			player_stats.purchased_upgrades["pickaxe"] += 1;
 			cost_increase("pickaxe"); // Increase cost
 			update_resources(); // Update resources immediately
+			console.log("Pickaxe bought!");
 		}
 	});
 
@@ -474,12 +518,55 @@ $(document).ready(function() {
 		$(".metal-amount").html("Metal: " + metal);
 		$(".student-amount").html("Students: " + students);
 
-		$(".passive-dirt").html("Passive Dirt Gain: " + player_stats.passive_dirt);
-		$(".passive-wood").html("Passive Wood Gain: " + player_stats.passive_wood);
-		$(".passive-stone").html("Passive Stone Gain: " + player_stats.passive_stone);
-		$(".passive-metal").html("Passive Metal Gain: " + player_stats.passive_metal);
-		console.log("updating scoreboard");
+		$(".passive-dirt").html("Dirt: " + player_stats.passive_dirt);
+		$(".passive-wood").html("Wood:" + player_stats.passive_wood);
+		$(".passive-stone").html("Stone: " + player_stats.passive_stone);
+		$(".passive-metal").html("Metal: " + player_stats.passive_metal);
+
+		//update passive levels
+		$("#workers").html("Workers Lv." + player_stats.purchased_passives.workers);
+		$("#vehicles").html("Vehicles Lv." + player_stats.purchased_passives.vehicles);
+		$("#slaves").html("Slaves Lv." + player_stats.purchased_passives.slaves);
+		$("#forester").html("Forester Lv." + player_stats.purchased_passives.forester);
+		$("#rock_quarry").html("Rock Quarry Lv." + player_stats.purchased_passives.rock_quarry);
+		$("#ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+
+		$(".upgrade-chainsaw").html("Chainsaw Upgrade (Level " + player_stats.purchased_upgrades.chainsaw +")");
+		$(".chainsaw-dirt").html("Cost: " + upgrade_costs.chainsaw.metal);
+		$(".upgrade-pickaxes").html("Pickaxe Upgrade (Level " + player_stats.purchased_upgrades.pickaxe +")");
+		$(".pickaxes-dirt").html("Cost: " + upgrade_costs.pickaxe.wood + "woods, " + upgrade_costs.drill.metal + "metals");
+		$(".upgrade-sledgehammers").html("Sledgehammer Upgrade (Level " + player_stats.purchased_upgrades.sledgehammer +")");
+		$(".sledgehammer-dirt").html("Cost: " + upgrade_costs.sledgehammer.wood + "woods, " + upgrade_costs.sledgehammer.metal + "metals");
+		$(".upgrade-dynamite").html("Dynamite Upgrade (Level " + player_stats.purchased_upgrades.dynamite +")");
+		$(".dynamite-dirt").html("Cost: " + upgrade_costs.dynamite.dirt);
+		$(".upgrade-drills").html("Drills Upgrade (Level " + player_stats.purchased_upgrades.drill +")");
+		$(".drills-dirt").html("Cost: " + upgrade_costs.drill.metal);
+		$(".upgrade-minecarts").html("Minecart Upgrade (Level " + player_stats.purchased_upgrades.minecart +")");
+		$(".minecarts-dirt").html("Cost: " + upgrade_costs.minecart.metal);
+		$(".upgrade-extractors").html("Extractor Upgrade (Level " + player_stats.purchased_upgrades.extractor +")");
+		$(".extractors-dirt").html("Cost: " + upgrade_costs.extractor.metal);
+		$(".upgrade-students").html("Students Upgrade (Level " + students +")");
+		$(".students-dirt").html("Cost: " + upgrade_costs.students.dirt);
+
+		$(".upgrade-bucket").html("Bucket Upgrade (Level " + player_stats.purchased_upgrades.buckets + ")");
+		$("#bucket-dirt").html("Cost: " + upgrade_costs.buckets.dirt + " Dirt");
+		$(".upgrade-shovel").html("Shovel Upgrade (Level " + player_stats.purchased_upgrades.shovels +")");
+		$("#shovel-dirt").html("Cost: " + upgrade_costs.shovels.dirt + " Dirt");
+		$(".upgrade-truck").html("Truck Upgrade (Level " + player_stats.purchased_upgrades.trucks +")");
+		$("#truck-dirt").html("Cost: " + upgrade_costs.trucks.dirt + " Dirt");
+		$(".upgrade-excavator").html("Excavator Upgrade (Level " + player_stats.purchased_upgrades.excavator +")");
+		$("#excavator-dirt").html("Cost: " + upgrade_costs.excavator.dirt + " Dirt");
+		$(".upgrade-backhoe").html("Backhoe Upgrade (Level " + player_stats.purchased_upgrades.backhoe +")");
+		$("#backhoe-dirt").html("Cost: " + upgrade_costs.backhoe.dirt + " Dirt");
+		$(".upgrade-axe").html("Axe Upgrade (Level " + player_stats.purchased_upgrades.axe +")");
+		$("#axe-dirt").html("Cost: " + upgrade_costs.axe.metal + " Metal and " + upgrade_costs.axe.wood + " Wood"); // Additional cost
+		$(".upgrade-hacksaw").html("Hacksaw Upgrade (Level " + player_stats.purchased_upgrades.hacksaw +")");
+		$("#hacksaw-dirt").html("Cost: " + upgrade_costs.hacksaw.metal + " Metal");
+		
+
+		// console.log("updating scoreboard");
 	}
+
 
 	// Function for checking to see if the player has enough resources to purchase active upgrades
 	function resource_purchase_check(upgrade_name) {
@@ -505,6 +592,12 @@ $(document).ready(function() {
 		upgrade_costs[upgrade_name].wood = Math.ceil(Math.pow(upgrade_costs[upgrade_name].wood, 1.1));
 		upgrade_costs[upgrade_name].stone = Math.ceil(Math.pow(upgrade_costs[upgrade_name].stone , 1.1));
 		upgrade_costs[upgrade_name].metal = Math.ceil(Math.pow(upgrade_costs[upgrade_name].metal , 1.1));
+	}
+
+	// Function to check for visual effects
+	function check_visuals() {
+
+
 	}
 
 	/**************************************
