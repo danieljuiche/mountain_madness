@@ -79,10 +79,11 @@ $(document).ready(function() {
 		var cost = player_stats.purchased_passives.workers.cost;
 
 		cost = cost*(Math.pow(1.1,player_stats.purchased_passives.workers.level));  
-
+		console.log(dirt);
+		console.log(cost);
 		if(dirt >= cost) {
 			player_stats.purchased_passives.workers.level += 1;
-			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.workers.level));
+			player_stats.purchased_passives.workers.cost = cost*(Math.pow(1.1,player_stats.purchased_passives.workers.level));
 			resource_change(-cost,0,0,0,0);
 		}	
 	});
@@ -95,7 +96,7 @@ $(document).ready(function() {
 
 		if(dirt >= cost) {
 			player_stats.purchased_passives.vehicles.leveld += 1;
-			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.vehicles.level));
+			player_stats.purchased_passives.vehicles.cost = cost*(Math.pow(1.1,player_stats.purchased_passives.vehicles.level));
 			resource_change(-cost,0,0,0,0);
 		}	
 	});
@@ -108,7 +109,7 @@ $(document).ready(function() {
 
 		if(dirt >= cost) {
 			player_stats.purchased_passives.slaves.level += 1;
-			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.slaves.level));
+			player_stats.purchased_passives.slaves.cost = cost*(Math.pow(1.1,player_stats.purchased_passives.slaves.level));
 			resource_change(-cost,0,0,0,0);
 		}	
 	});
@@ -121,7 +122,7 @@ $(document).ready(function() {
 
 		if(dirt >= cost) {
 			player_stats.purchased_passives.forester.level += 1;
-			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.forester.level));
+			layer_stats.purchased_passives.forester.cost = cost*(Math.pow(1.1,player_stats.purchased_passives.forester.level));
 			resource_change(-cost,0,0,0,0);
 		}
 	});
@@ -134,7 +135,7 @@ $(document).ready(function() {
 
 		if(dirt >= cost) {
 			player_stats.purchased_passives.rock_quarry.level += 1;
-			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.rock_quarry.level));
+			player_stats.purchased_passives.rock_quarry.cost = cost*(Math.pow(1.1,player_stats.purchased_passives.rock_quarry.level));
 			resource_change(-cost,0,0,0,0);
 		}
 	});
@@ -147,7 +148,7 @@ $(document).ready(function() {
 
 		if(dirt >= cost) {
 			player_stats.purchased_passives.ore_quarry.level += 1;
-			cost = cost*(Math.pow(1.1,player_stats.purchased_passives.ore_quarry.level));
+			player_stats.purchased_passives.ore_quarry.cost = cost*(Math.pow(1.1,player_stats.purchased_passives.ore_quarry.level));
 			resource_change(-cost,0,0,0,0);
 		}
 	});
@@ -172,17 +173,17 @@ $(document).ready(function() {
 
 		if(player_stats.purchased_passives.forester.level > 0) {
 			var level = player_stats.purchased_passives.forester.level;
-			resource_change((player_stats.purchased_passives.forester.effect * level),0,0,0,0);
+			resource_change(0,(player_stats.purchased_passives.forester.effect * level),0,0,0);
 		} 
 
 		if(player_stats.purchased_passives.rock_quarry.level > 0) {
 			var level = player_stats.purchased_passives.rock_quarry.level;
-			resource_change((player_stats.purchased_passives.rock_quarry.effect * level),0,0,0,0);
+			resource_change(0,0,(player_stats.purchased_passives.rock_quarry.effect * level),0,0);
 		} 
 
 		if(player_stats.purchased_passives.ore_quarry.level > 0) {
 			var level = player_stats.purchased_passives.ore_quarry.level;
-			resource_change((player_stats.purchased_passives.ore_quarry.effect * level),0,0,0,0);
+			resource_change(0,0,0,0,0);
 		} 
 
 		update_resources();
