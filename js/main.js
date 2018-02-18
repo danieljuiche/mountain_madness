@@ -245,11 +245,9 @@ $(document).ready(function() {
 	}
 
 
-<<<<<<< HEAD
-	var game_update_frequency = 1; //Milliseconds
-=======
+
 	var game_update_frequency = 500; //Milliseconds
->>>>>>> master
+
 
 
 	/**************************************
