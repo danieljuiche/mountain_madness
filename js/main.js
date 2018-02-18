@@ -314,6 +314,13 @@ $(document).ready(function() {
 
 	***************************************/
 
+	$(".hover-bold").click(function(){
+		$(this).addClass("clicked");
+		setTimeout(function() {
+			$(".hover-bold").removeClass("clicked");
+		}, 200);
+	});
+
 	// Workers upgrade button
 	$(".workers-passive").click(function() {
 		if (resource_purchase_check("workers")) {

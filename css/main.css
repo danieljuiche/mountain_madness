@@ -88,10 +88,13 @@
 .hover-bold:hover {
 	border: 2px solid black;
 	margin-bottom: 6px;
+	transition: all 0.3s;
+}
+.clicked.hover-bold:hover{
 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
-	transition: all 0.3s;
+	transition: all 0.2s;
 }
 .no-bullets {
 	list-style-type: none;
