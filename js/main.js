@@ -27,7 +27,7 @@ $(document).ready(function() {
 		purchased_upgrades: {
 			buckets: 0, 
 			shovels: 0, 
-			trucks: 0, // added "trucks" variable
+			trucks: 0,
 			excavator: 0,
 			backhoe: 0,
 			axe: 0,
@@ -38,13 +38,13 @@ $(document).ready(function() {
 			dynamite: 0,
 			drill: 0,
 			minecart: 0,
-			extractor: 0, // changed from "x"
+			extractor: 0,
 		}
 	}
 
 	var upgrade_costs = {
 		workers: {
-			dirt: 10,
+			dirt: 100,
 			wood: 0,
 			stone: 0,
 			metal: 0
@@ -503,25 +503,25 @@ $(document).ready(function() {
 
 	// Functions for adding resources
 	function resource_change(dirt_change, wood_change, stone_change, metal_change, students_change) {
-		dirt += dirt_change;
-		wood += wood_change;
-		stone += stone_change;
-		metal += metal_change;
-		students += students_change;
+		dirt += dirt_change; // Makes changes to the dirt total
+		wood += wood_change; // Makes changes to the wood total
+		stone += stone_change; // Makes changes to the stone total
+		metal += metal_change; // Makes changes to the metal total
+		students += students_change; // Makes changes to the students total
 	}
 
 	// Function for updating resources to scoreboard
 	function update_resources() {
-		$(".dirt-amount").html("Dirt: " + dirt);
-		$(".wood-amount").html("Wood: " + wood);
-		$(".stone-amount").html("Stone: " + stone);
-		$(".metal-amount").html("Metal: " + metal);
-		$(".student-amount").html("Students: " + students);
+		$(".dirt-amount").html("Dirt: " + dirt); // Displays total amount of Dirt
+		$(".wood-amount").html("Wood: " + wood); // Displays total amount of Wood
+		$(".stone-amount").html("Stone: " + stone); // Displays total amount of Stone
+		$(".metal-amount").html("Metal: " + metal); // Displays total amount of Metal
+		$(".student-amount").html("Students: " + students); // Displays total amount of Students
 
-		$(".passive-dirt").html("Dirt: " + player_stats.passive_dirt);
-		$(".passive-wood").html("Wood:" + player_stats.passive_wood);
-		$(".passive-stone").html("Stone: " + player_stats.passive_stone);
-		$(".passive-metal").html("Metal: " + player_stats.passive_metal);
+		$(".passive-dirt").html("Dirt: " + player_stats.passive_dirt); // Displays passive dirt generation
+		$(".passive-wood").html("Wood: " + player_stats.passive_wood); // Displays passive wood generation
+		$(".passive-stone").html("Stone: " + player_stats.passive_stone); // Displays passive stone generation
+		$(".passive-metal").html("Metal: " + player_stats.passive_metal); // Displays passive metal generation
 
 		//update passive levels
 		$("#workers").html("Workers Lv." + player_stats.purchased_passives.workers);
@@ -530,6 +530,21 @@ $(document).ready(function() {
 		$("#forester").html("Forester Lv." + player_stats.purchased_passives.forester);
 		$("#rock_quarry").html("Rock Quarry Lv." + player_stats.purchased_passives.rock_quarry);
 		$("#ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+
+		$(".upgrade-bucket").html("Bucket Upgrade (Level " + player_stats.purchased_upgrades.buckets + ")");
+		$("#bucket-dirt").html("Cost: " + upgrade_costs.buckets.dirt + " Dirt");
+		$(".upgrade-shovel").html("Shovel Upgrade (Level " + player_stats.purchased_upgrades.shovels +")");
+		$("#shovel-dirt").html("Cost: " + upgrade_costs.shovels.dirt + " Dirt");
+		$(".upgrade-truck").html("Truck Upgrade (Level " + player_stats.purchased_upgrades.trucks +")");
+		$("#truck-dirt").html("Cost: " + upgrade_costs.trucks.dirt + " Dirt");
+		$(".upgrade-excavator").html("Excavator Upgrade (Level " + player_stats.purchased_upgrades.excavator +")");
+		$("#excavator-dirt").html("Cost: " + upgrade_costs.excavator.dirt + " Dirt");
+		$(".upgrade-backhoe").html("Backhoe Upgrade (Level " + player_stats.purchased_upgrades.backhoe +")");
+		$("#backhoe-dirt").html("Cost: " + upgrade_costs.backhoe.dirt + " Dirt");
+		$(".upgrade-axe").html("Axe Upgrade (Level " + player_stats.purchased_upgrades.axe +")");
+		$("#axe-dirt").html("Cost: " + upgrade_costs.axe.metal + " Metal and " + upgrade_costs.axe.wood + " Wood");
+		$(".upgrade-hacksaw").html("Hacksaw Upgrade (Level " + player_stats.purchased_upgrades.hacksaw +")");
+		$("#hacksaw-dirt").html("Cost: " + upgrade_costs.hacksaw.metal + " Metal");
 
 		$(".upgrade-chainsaw").html("Chainsaw Upgrade (Level " + player_stats.purchased_upgrades.chainsaw +")");
 		$(".chainsaw-dirt").html("Cost: " + upgrade_costs.chainsaw.metal + " Metal");
@@ -547,22 +562,6 @@ $(document).ready(function() {
 		$(".extractors-dirt").html("Cost: " + upgrade_costs.extractor.metal + " Metal");
 		$(".upgrade-students").html("Students Upgrade (Level " + students +")");
 		$(".students-dirt").html("Cost: " + upgrade_costs.students.dirt + " Dirt");
-
-		$(".upgrade-bucket").html("Bucket Upgrade (Level " + player_stats.purchased_upgrades.buckets + ")");
-		$("#bucket-dirt").html("Cost: " + upgrade_costs.buckets.dirt + " Dirt");
-		$(".upgrade-shovel").html("Shovel Upgrade (Level " + player_stats.purchased_upgrades.shovels +")");
-		$("#shovel-dirt").html("Cost: " + upgrade_costs.shovels.dirt + " Dirt");
-		$(".upgrade-truck").html("Truck Upgrade (Level " + player_stats.purchased_upgrades.trucks +")");
-		$("#truck-dirt").html("Cost: " + upgrade_costs.trucks.dirt + " Dirt");
-		$(".upgrade-excavator").html("Excavator Upgrade (Level " + player_stats.purchased_upgrades.excavator +")");
-		$("#excavator-dirt").html("Cost: " + upgrade_costs.excavator.dirt + " Dirt");
-		$(".upgrade-backhoe").html("Backhoe Upgrade (Level " + player_stats.purchased_upgrades.backhoe +")");
-		$("#backhoe-dirt").html("Cost: " + upgrade_costs.backhoe.dirt + " Dirt");
-		$(".upgrade-axe").html("Axe Upgrade (Level " + player_stats.purchased_upgrades.axe +")");
-		$("#axe-dirt").html("Cost: " + upgrade_costs.axe.metal + " Metal and " + upgrade_costs.axe.wood + " Wood"); // Additional cost
-		$(".upgrade-hacksaw").html("Hacksaw Upgrade (Level " + player_stats.purchased_upgrades.hacksaw +")");
-		$("#hacksaw-dirt").html("Cost: " + upgrade_costs.hacksaw.metal + " Metal");
-		
 
 		// console.log("updating scoreboard");
 	}
