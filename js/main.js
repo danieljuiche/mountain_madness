@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
 	// Initialized and current resources
-	var dirt = 10000;
-	var wood = 0;
-	var stone = 0;
-	var metal = 0;
-	var students = 0;
+	var dirt = 100000;
+	var wood = 10000;
+	var stone = 10000;
+	var metal = 10000;
+	var students = 10000;
 
 	var player_stats = {
 		dirt_per_click: 1,
@@ -172,15 +172,16 @@ $(document).ready(function() {
 		}
 	}
 
-
-
 	var game_update_frequency = 500; //Milliseconds
 
-	// Check for passive upgrades
-	// workers upgrade button
+	/**************************************
+
+		    Passive Upgrade Section
+
+	***************************************/
+
+	// Workers upgrade button
 	$("#workers").click(function() {
-
-
 		if (resource_purchase_check("workers")) {
 			resource_purchase_update("workers"); // Take away the resources to purchase the tool
 			player_stats.passive_dirt += 1; // Increase passive amount
@@ -190,7 +191,7 @@ $(document).ready(function() {
 		}
 	});
 
-	//vehicles upgrade button
+	// vehicles upgrade button
 	$("#vehicles").click(function() {
 		if (resource_purchase_check("vehicles")) {
 			resource_purchase_update("vehicles"); // Take away the resources to purchase the tool
@@ -201,7 +202,7 @@ $(document).ready(function() {
 		}
 	});
 
-	//dirt_slaves upgrade button
+	// dirt_slaves upgrade button
 	$("#slaves").click(function() {
 		if (resource_purchase_check("slaves")) {
 			resource_purchase_update("slaves"); // Take away the resources to purchase the tool
@@ -245,13 +246,11 @@ $(document).ready(function() {
 		}
 	});
 
+	/**************************************
 
-	// Main game loop which updates at set intervals
-	setInterval(function(){ 
-		resource_change(player_stats.passive_dirt,player_stats.passive_wood,player_stats.passive_stone,player_stats.passive_metal,0);
-		update_resources();
-	}, game_update_frequency);
+		    End Passive Upgrade Section
 
+	***************************************/
 
 	// Play area clicking
 	$("#play-area").click(function() {
@@ -259,13 +258,11 @@ $(document).ready(function() {
 		update_resources();
 	});
 
-	/*
+	/**************************************
 
-
-	 Upgrade area clicking
-
-
-	*/
+		    Active Upgrade Section
+		    
+	***************************************/
 
 	$(".buckets-upgrade").click(function () {
 		// Check to see if the player has enough resources to purchase the tool
@@ -430,6 +427,36 @@ $(document).ready(function() {
 		}
 	});
 
+	/**************************************
+
+		    End Active Upgrade Section
+		    
+	***************************************/
+
+
+	/**************************************
+
+			Main Game Loop
+		    
+	***************************************/
+
+	setInterval(function(){ 
+		resource_change(player_stats.passive_dirt,player_stats.passive_wood,player_stats.passive_stone,player_stats.passive_metal,0);
+		update_resources();
+	}, game_update_frequency);
+
+	/**************************************
+
+			End Main Game Loop
+		    
+	***************************************/
+
+	/**************************************
+
+			Helper Functions
+		    
+	***************************************/
+
 	// Functions for adding resources
 	function resource_change(dirt_change, wood_change, stone_change, metal_change, students_change) {
 		dirt += dirt_change;
@@ -445,8 +472,13 @@ $(document).ready(function() {
 		$(".wood-amount").html("Wood: " + wood);
 		$(".stone-amount").html("Stone: " + stone);
 		$(".metal-amount").html("Metal: " + metal);
-		$(".students-amount").html("Students: " + students);
-		// console.log("updating scoreboard");
+		$(".student-amount").html("Students: " + students);
+
+		$(".passive-dirt").html("Passive Dirt Gain: " + player_stats.passive_dirt);
+		$(".passive-wood").html("Passive Wood Gain: " + player_stats.passive_wood);
+		$(".passive-stone").html("Passive Stone Gain: " + player_stats.passive_stone);
+		$(".passive-metal").html("Passive Metal Gain: " + player_stats.passive_metal);
+		console.log("updating scoreboard");
 	}
 
 	// Function for checking to see if the player has enough resources to purchase active upgrades
@@ -474,4 +506,10 @@ $(document).ready(function() {
 		upgrade_costs[upgrade_name].stone = Math.ceil(Math.pow(upgrade_costs[upgrade_name].stone , 1.1));
 		upgrade_costs[upgrade_name].metal = Math.ceil(Math.pow(upgrade_costs[upgrade_name].metal , 1.1));
 	}
+
+	/**************************************
+
+			End Helper Functions
+		    
+	***************************************/
 });
