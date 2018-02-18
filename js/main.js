@@ -301,6 +301,21 @@ $(document).ready(function() {
 		update_resources();
 	});
 
+	$("#f-stone").click(function() {
+		resource_change(-1, 0,player_stats.stone_per_click,0,0);
+		update_resources();
+	})
+
+	$("#f-wood").click(function() {
+		resource_change(-1, player_stats.wood_per_click,0,0,0);
+		update_resources();
+	})
+
+	$("#f-metal").click(function() {
+		resource_change(-1, 0,0,player_stats.metal_per_click,0);
+		update_resources();
+	})
+
 	/**************************************
 
 		    Active Upgrade Section
