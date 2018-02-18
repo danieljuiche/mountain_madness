@@ -14,11 +14,44 @@
     user-select: none;
 }
 
+/* 
+	
+	Overlay section 
+
+*/
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Shown by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#text{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+/*
+
+	End of overlay section
+
+*/
 .top-text {
 	font-weight: bold;
 	font-family: Trebuchet MS;
 }
-
 .not-allowed {
     background-color: lightgrey;
 	cursor: not-allowed;
@@ -32,11 +65,19 @@
 	position: relative;
 }
 
+.hidden {
+	display: none !important;
+}
+
 .no-bullets {
 	list-style-type: none;
 	font-family: Trebuchet MS;
 }
 
+h1 {
+	font-size: 30px;
+
+}
 .object_pictures {
 	margin-right:3em;
 	position: absolute;
@@ -51,6 +92,16 @@
     height: 400px;
  	overflow-y: scroll;
  	border-radius: 25px 25px 25px 25px;
+}
+
+.overlay-box {
+	max-width: 600px;
+    overflow: auto;
+    height: 600px;
+    overflow-y: scroll;
+    margin: auto;
+    margin-top: 5%;
+    background: white;
 }
 
 .round {
@@ -72,6 +123,7 @@
 }
 
 .scroll-title {
+	font-size: 25px;
 	padding-top: .5em;
 	font-weight: bold;
 	font-family: Trebuchet MS;
@@ -146,7 +198,7 @@ img {
 	display: none;
 }
 #mountain5 {
-	display: none;
+	display: block;
 
 }
 
@@ -167,63 +219,64 @@ img {
 /* Positioning of buildings */
 
 #build1 {
-	bottom: 48.5%;
-	left: 22%;
+	top: 160px;
+	left: 40px;
 	display: block;
+	position: relative;
 }
 
 #build2 {
 	bottom: 48.5%;
 	left: 40%;
-	display: block;
+	display: none;
 }
 
 #build3 {
 	bottom: 48.5%;
 	left: 53%;
-	display: block;
+	display: none;
 }
 
 #build4 {
 	bottom: 48.5%;
 	left: 31%;
-	display: block;
+	display: none;
 }
 
 #build5 {
 	bottom: 48.5%;
 	left: 44%;
-	display: block;
+	display: none;
 }
 
 #build6 {
 	bottom: 48.5%;
 	left: 70%;
-	display: block;
+	display: none;
 }
 
 #build7 {
 	bottom: 48.5%;
 	left: 28%;
-	display: block;
+	display: none;
 }
 
 #build8 {
 	bottom: 48.5%;
 	left: 41%;
-	display: block;
+	display: none;
 }
 
 #build9 {
 	bottom: 48.5%;
 	left: 61%;
-	display: block;
+	display: none;
 }
 
 #build10 {
 	bottom: 48.5%;
 	left: 67%;
-	display: block;
+	display: none;
 }
 
 .text-container {
