@@ -39,6 +39,7 @@
 
 .object_pictures {
 	margin-right:3em;
+	position: absolute;
 }
 
 .scrollable {
@@ -47,7 +48,7 @@
     padding: 5px;
     background: white;
     overflow: auto;
-    height: 600px;
+    height: 400px;
  	overflow-y: scroll;
  	border-radius: 25px 25px 25px 25px;
 }
@@ -79,6 +80,18 @@
 .box {
 	position: relative;
 	border: 5px solid black;
+}
+
+.skill-box {
+	position: relative;
+    border: 5px solid black;
+    padding: 5px;
+    background: white;
+    overflow: auto;
+    height: 200px;
+ 	overflow-y: scroll;
+ 	border-radius: 25px 25px 25px 25px;
+ 	margin-top:1em;
 }
 
 .sticky-bottom {
