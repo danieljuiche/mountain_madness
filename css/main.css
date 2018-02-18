@@ -248,8 +248,8 @@ img {
 /* Positioning of buildings */
 
 #build1 {
-	top: 160px;
-	left: 40px;
+	top: 35%;
+	left: 30%;
 	display: block;
 	position: relative;
 }
