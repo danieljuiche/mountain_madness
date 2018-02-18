@@ -83,7 +83,6 @@ h1 {
 
 }
 .object_pictures {
-	margin-left:3em;
 	position: absolute;
 	top: 25%;
     right: 25px;
@@ -216,7 +215,7 @@ img {
 }
 #f-wood {
 	top: 15%;
-	left: 80%;
+	left: 75%;
 }
 
 /* Positioning of buildings */
