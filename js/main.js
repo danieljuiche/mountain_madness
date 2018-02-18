@@ -481,10 +481,6 @@ $(document).ready(function() {
 		console.log("updating scoreboard");
 	}
 
-	//Function for updating passive levels
-	function update_passives() {
-		$("#workers").html("Workers Lv."+ player_stats.purchased_passives.workers);
-	}
 
 	// Function for checking to see if the player has enough resources to purchase active upgrades
 	function resource_purchase_check(upgrade_name) {
