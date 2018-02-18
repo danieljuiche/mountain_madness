@@ -28,7 +28,7 @@ $(document).ready(function() {
 		purchased_upgrades: {
 			buckets: 0,
 			shovels: 0,
-			excavator: 0,
+			extractor: 0,
 			backhoe: 0,
 			axe: 0,
 			hacksaw: 0,
@@ -351,7 +351,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".pickaxe-upgrade").click(function () {
+	$(".pickaxes-upgrade").click(function () {
 		// Check to see if the player has enough resources to purchase the tool
 		if (resource_purchase_check("pickaxe")) {
 			resource_purchase_update("pickaxe"); // Take away the resources to purchase the tool
@@ -498,7 +498,7 @@ $(document).ready(function() {
 		$(".drills-dirt").html("Cost: " + upgrade_costs.drill.metal);
 		$(".upgrade-minecarts").html("Minecart Upgrade (Level " + player_stats.purchased_upgrades.minecart +")");
 		$(".minecarts-dirt").html("Cost: " + upgrade_costs.minecart.metal);
-		$(".upgrade-extractors").html("Extractor Upgrade (Level " + player_stats.purchased_upgrades.x +")");
+		$(".upgrade-extractors").html("Extractor Upgrade (Level " + player_stats.purchased_upgrades.extractor +")");
 		$(".extractors-dirt").html("Cost: " + upgrade_costs.extractor.metal);
 		$(".upgrade-students").html("Students Upgrade (Level " + students +")");
 		$(".students-dirt").html("Cost: " + upgrade_costs.students.dirt);
