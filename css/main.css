@@ -1,5 +1,7 @@
 /* Css styling goes here */
 
+
+
 .scrollable {
 	position: relative;
     border: 5px solid black;
@@ -12,17 +14,13 @@
 
 .left-box {
 	border: 2px solid black;
-	width:960px;
+	width: 960px;
     margin: 0 auto; 
 }
 
 .box {
-	border: 5px solid black;
-}
-
-.col {
-	padding-top: 2em;
 	position: relative;
+	border: 5px solid black;
 }
 
 .sticky-bottom {
