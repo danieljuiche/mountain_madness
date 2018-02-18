@@ -68,6 +68,10 @@
 	cursor: not-allowed;
 }
 
+.pointer {
+	cursor: pointer;
+}
+
 .absolute {
 	position: absolute;
 }
@@ -81,7 +85,14 @@
 .hidden {
 	display: none !important;
 }
-
+.hover-bold:hover {
+	border: 2px solid black;
+	margin-bottom: 6px;
+	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	transition: all 0.3s;
+}
 .no-bullets {
 	list-style-type: none;
 	font-family: Trebuchet MS;
