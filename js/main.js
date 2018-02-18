@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var wood = 000000;
 	var stone = 000000;
 	var metal = 000000;
-	var students = 0000;
+	var students = 000;
 
 	var player_stats = {
 		dirt_per_click: 1,
@@ -386,26 +386,6 @@ $(document).ready(function() {
 
 	***************************************/
 
-	// Play area clicking
-	$("#play-area").click(function() {
-		resource_change(player_stats.dirt_per_click, 0, 0, 0, 0);
-		update_resources();
-	});
-
-	$("#f-stone").click(function() {
-		resource_change(-1, 0,player_stats.stone_per_click,0,0);
-		update_resources();
-	})
-
-	$("#f-wood").click(function() {
-		resource_change(-1, player_stats.wood_per_click,0,0,0);
-		update_resources();
-	})
-
-	$("#f-metal").click(function() {
-		resource_change(-1, 0,0,player_stats.metal_per_click,0);
-		update_resources();
-	})
 
 	/**************************************
 
@@ -692,12 +672,14 @@ $(document).ready(function() {
 		    
 	***************************************/
 	$(".uni-raid").click(function() {
-		
+		console.log(students);
 		num = Math.round(Math.random());
 		if (students >= 100 && num ==1) {
 			resource_change(0,0,0,0,50);
-		} else {
+		} else if (students >= 100) {
 			resource_change(0,0,0,0,-100);
+		} else {
+
 		}
 	});
 
@@ -724,12 +706,13 @@ $(document).ready(function() {
 	});
 
 	$(".col-raid").click(function() {
-		
-		resource_change(0,0,0,0,-100)
-		num = Math.round(Math.random());
-		if (students >= 100 && num ==1) {
-			resource_change(150000,0,0,0,0);
-		} 
+		if (students >= 100) {
+			resource_change(0,0,0,0,-100);
+			num = Math.round(Math.random());
+			if (num == 1) {
+				resource_change(150000,0,0,0,0);
+			}
+		}
 	});
 
 	/**************************************
@@ -737,6 +720,40 @@ $(document).ready(function() {
 		    End Raid Section
 		    
 	***************************************/
+
+
+	/**************************************
+
+		    Play Area Section
+
+	***************************************/
+	// Play area clicking
+	$("#play-area").click(function() {
+		resource_change(player_stats.dirt_per_click, 0, 0, 0, 0);
+		update_resources();
+	});
+
+	$("#f-stone").click(function() {
+		resource_change(-1, 0,player_stats.stone_per_click,0,0);
+		update_resources();
+	});
+
+	$("#f-wood").click(function() {
+		resource_change(-1, player_stats.wood_per_click,0,0,0);
+		update_resources();
+	});
+
+	$("#f-metal").click(function() {
+		resource_change(-1, 0,0,player_stats.metal_per_click,0);
+		update_resources();
+	});
+
+	/**************************************
+
+		    End Play Area Section
+
+	***************************************/
+
 
 	/**************************************
 
