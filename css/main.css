@@ -83,8 +83,8 @@ h1 {
 
 }
 .object_pictures {
-	margin-right:3em;
-	position: absolute;
+	margin-left:3em;
+	position: relative;
 	top: 25%;
     right: 25px;
     margin-right: 0px;
