@@ -67,6 +67,7 @@
 .text-container {
 	border-radius: 25px;
 	padding-left: 1em;
+	background: #d6ffc4;
 }
 
 .scroll-title {
@@ -91,6 +92,7 @@
     height: calc(100% - 60px);
     width: 100%;
     background-color: #f1ecda;
+
 }
 .div-wrapper img {
     position: absolute;
@@ -108,6 +110,10 @@ img {
 	left: 50%;
 	bottom: 0px;
 	transform: translate(-50%, 0);
+}
+
+#play-area {
+	background-color: rgb(241, 236, 218);
 }
 
 /* Displaying mountain stages by id (mountain0 = default)*/
