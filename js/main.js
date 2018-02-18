@@ -231,7 +231,7 @@ $(document).ready(function() {
 
 	// Main game loop which updates at set intervals
 	setInterval(function(){ 
-		resource_change(player_stats.passive_dirt,0,0,0,0);
+		resource_change(player_stats.passive_dirt,player_stats.passive_wood,player_stats.passive_stone,player_stats.passive_metal,0);
 		update_resources();
 	}, game_update_frequency);
 
