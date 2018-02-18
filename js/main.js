@@ -13,22 +13,42 @@ $(document).ready(function() {
 		stone_per_click: 1,
 		metal_per_click: 1,
 		purchased_passives: {
-			dirt_level: 0,
-			wood_level: 0,
-			stone_level: 0,
-			metal_level: 0
+			workers_level: 0,
+			vehicles_level: 0,
+			slaves_level: 0,
+			forester_level: 0,
+			rock_quarry_level: 0,
+			ore_quarry_level: 0
+		},
+
+		// True or false switches for active upgrades
+		purchased_upgrades: {
+			dirt: {
+				buckets: 0,
+				shovels: 0,
+				excavator: 0,
+				backhoe: 0
+			},
+			wood: {
+				axe: 0,
+				hacksaw: 0,
+				chainsaw: 0
+			},
+			stone: {
+				pickaxe: 0,
+				sledgehammer: 0,
+				dynamite: 0
+			},
+			metal: {
+				drill: 0,
+				minecart: 0,
+				x: 0,
+			}
 		}
 	}
 
 	var game_update_frequency = 500; //Milliseconds
 
-	function Students(population) {
-		this.population = 0;
-	}
-
-	function AutomaticCollectors(dirtCost, dirtSec, woodSec, stoneSec, metalSec) {
-		this.dirtCost = 
-	}
 	// Object for active skills
 
 	// Active upgrade information
@@ -43,48 +63,40 @@ $(document).ready(function() {
 
 	// }
 
-
-	// Upgrades
-
-	//dirt_slaves upgrade button
-	$("#dirt_slaves").click(function()) {
-		if(dirt >= 250) {
-			player_stats.purchased_passives.dirt_level += 1;
-			resource_change(250,0,0,0,0);
-		}	
-	}
-
-	// collect_wood upgrade button
-	$("#collect_wood").click(function()) {
-		if(dirt >= 25000) {
-			player_stats.purchased_passives.wood_level += 1;
-			resource_change(25000,0,0,0,0);
-		}
-	}
-
-	// collect_stone upgrade button
-	$("#collect_stone").click(function()) {
-		if(dirt >= 15000) {
-			player_stats.purchased_passives.stone_level += 1;
-			resource_change(15000,0,0,0,0);
-		}
-	}
-
-	//collect_metal upgrade button
-	$("#collect_ore").click(function()) {
-		if(dirt >= 50000) {
-			player_stats.purchased_passives.metal_level += 1;
-			resource_change(50000,0,0,0,0);
-		}
-	}
-
-	// Main game loop
-
+	// Main game loop which updates at set intervals
 	setInterval(function(){ 
-		if (1) {
-			resource_change(10,10,10,10,10);
-		}
+		// Check for passive upgrades
+		//dirt_slaves upgrade button
+		$("#dirt_slaves").click(function() {
+			if(dirt >= 250) {
+				player_stats.purchased_passives.dirt_level += 1;
+				resource_change(250,0,0,0,0);
+			}	
+		});
 
+		// collect_wood upgrade button
+		$("#collect_wood").click(function() {
+			if(dirt >= 25000) {
+				player_stats.purchased_passives.wood_level += 1;
+				resource_change(25000,0,0,0,0);
+			}
+		});
+
+		// collect_stone upgrade button
+		$("#collect_stone").click(function() {
+			if(dirt >= 15000) {
+				player_stats.purchased_passives.stone_level += 1;
+				resource_change(15000,0,0,0,0);
+			}
+		});
+
+		//collect_metal upgrade button
+		$("#collect_ore").click(function() {
+			if(dirt >= 50000) {
+				player_stats.purchased_passives.metal_level += 1;
+				resource_change(50000,0,0,0,0);
+			}
+		});
 		update_resources();
 	}, game_update_frequency);
 
@@ -104,14 +116,14 @@ $(document).ready(function() {
 		students += students_change;
 	}
 
+
+	// Function for updating resources to scoreboard
 	function update_resources() {
 		$(".dirt-amount").html("Dirt: " + dirt);
 		$(".wood-amount").html("Wood: " + wood);
 		$(".stone-amount").html("Stone: " + stone);
 		$(".metal-amount").html("Metal: " + metal);
 		$(".students-amount").html("Students: " + students);
-
-
 	}
 
 });
