@@ -26,8 +26,9 @@ $(document).ready(function() {
 		},
 		// Active upgrade levels
 		purchased_upgrades: {
-			buckets: 0,
-			shovels: 0,
+			buckets: 0, 
+			shovels: 0, 
+			trucks: 0, // added "trucks" variable
 			excavator: 0,
 			backhoe: 0,
 			axe: 0,
@@ -38,7 +39,7 @@ $(document).ready(function() {
 			dynamite: 0,
 			drill: 0,
 			minecart: 0,
-			x: 0,
+			extractor: 0, // changed from "x"
 		}
 	}
 
@@ -318,7 +319,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".axe-upgrade").click(function () {
+	$(".axes-upgrade").click(function () {
 		// Check to see if the player has enough resources to purchase the tool
 		if (resource_purchase_check("axe")) {
 			resource_purchase_update("axe"); // Take away the resources to purchase the tool
@@ -501,20 +502,21 @@ $(document).ready(function() {
 		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
 		$(".ore_quarry").html("Cost: 0" + player_stats.purchased_passives.ore_quarry);
 
-		$(".upgrade-bucket").html("Bucket Upgrade (Level " + player_stats.purchased_upgrades.bucket +")");
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
-		$(".ore_quarry").html("Ore Quarry Lv." + player_stats.purchased_passives.ore_quarry);
+		$(".upgrade-bucket").html("Bucket Upgrade (Level " + player_stats.purchased_upgrades.buckets + ")");
+		$("#bucket-dirt").html("Cost: " + upgrade_costs.buckets.dirt + " Dirt");
+		$(".upgrade-shovel").html("Shovel Upgrade (Level " + player_stats.purchased_upgrades.shovels +")");
+		$("#shovel-dirt").html("Cost: " + upgrade_costs.shovels.dirt + " Dirt");
+		$(".upgrade-truck").html("Truck Upgrade (Level " + player_stats.purchased_upgrades.trucks +")");
+		$("#truck-dirt").html("Cost: " + upgrade_costs.trucks.dirt + " Dirt");
+		$(".upgrade-excavator").html("Excavator Upgrade (Level " + player_stats.purchased_upgrades.excavator +")");
+		$("#excavator-dirt").html("Cost: " + upgrade_costs.excavator.dirt + " Dirt");
+		$(".upgrade-backhoe").html("Backhoe Upgrade (Level " + player_stats.purchased_upgrades.backhoe +")");
+		$("#backhoe-dirt").html("Cost: " + upgrade_costs.backhoe.dirt + " Dirt");
+		$(".upgrade-axe").html("Axe Upgrade (Level " + player_stats.purchased_upgrades.axe +")");
+		$("#axe-dirt").html("Cost: " + upgrade_costs.axe.metal + " Metal and " + upgrade_costs.axe.wood + " Wood"); // Additional cost
+		$(".upgrade-hacksaw").html("Hacksaw Upgrade (Level " + player_stats.purchased_upgrades.hacksaw +")");
+		$("#hacksaw-dirt").html("Cost: " + upgrade_costs.hacksaw.metal + " Metal");
+		
 
 		console.log("updating scoreboard");
 	}
