@@ -690,9 +690,44 @@ $(document).ready(function() {
 		    
 	***************************************/
 	$(".uni-raid").click(function() {
-		students -= 100;
-		if (students >= 100 && (Math.random() >=0.5)) {
-			student += 150;
+		
+		num = Math.round(Math.random());
+		if (students >= 100 && num ==1) {
+			resource_change(0,0,0,0,50);
+		} else {
+			resource_change(0,0,0,0,-100);
+		}
+	});
+
+	$(".it-raid").click(function() {
+		//Math.floor(Math.random() * (high - low + 1) + low);
+		num = Math.floor(Math.random() * (4 - 1 + 1) + 1);
+		console.log(num);
+		if (students >= 100) {
+			switch(num) {
+				case 1:
+					resource_change(100000,0,0,0,0);
+					break;
+				case 2:
+					resource_change(0,100000,0,0,0);
+					break;
+				case 3:
+					resource_change(0,0,100000,0,0);
+					break;
+				case 4:
+					resource_change(0,0,0,100000,0);
+			}
+			resource_change(0,0,0,0,-100);
+		} 
+	});
+
+	$(".col-raid").click(function() {
+		
+		num = Math.round(Math.random());
+		if (students >= 100 && num ==1) {
+			resource_change(150000,0,0,0,0);
+		} else {
+			resource_change(0,0,0,0,-100);
 		}
 	});
 
