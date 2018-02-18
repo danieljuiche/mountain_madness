@@ -5,11 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="css/main.css">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="css/main.css">
 
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>   
   <script type="text/javascript" src="js/main.js"></script>
@@ -54,7 +53,7 @@
         <div class="col-xs-12">
           <div class="row">
             <div class="col-sm-6">
-              <p class="text-center">Resources</p>
+              <p class="top-text">Resources</p>
               <ul class="no-bullets">
                 <li class="dirt-amount">Dirt: 0</li>
                 <li class="wood-amount">Wood: 0</li>
@@ -64,7 +63,7 @@
               </ul>
             </div>
             <div class="col-sm-6">
-              <p class="text-center">Passive Gains</p>
+              <p class="top-text">Passive Gains</p>
               <ul class="no-bullets">
                 <li class="passive-dirt">Dirt: 0</li>
                 <li class="passive-wood">Wood: 0</li>
@@ -73,12 +72,10 @@
               </ul>
             </div>
           </div>
-          <div class ="button-group">
-           <button class="round button id="save">SAVE</button>
+           <button class="round button" id="save">SAVE</button>
            <button class="round button" id="load">LOAD</button>
-          </div>
         </div>
-        <div class="col-xs-12 scrollable box scrollbar-thumb">
+        <div class="col-xs-12 scrollable box">
           <p class="text-center scroll-title">Passive Upgrades</p>
           <!-- 
 
@@ -87,32 +84,32 @@
           -->
           <div class="text-container workers-passive">
             <h1 id="workers">Workers LV. </h1>
-            <p>Workers who collects dirt for you. +1 dirt per tick. <img class="object_pictures" src="" alt="workers picture"></p>
+            <p>Workers who collects dirt for you. <br>+1 dirt per tick. <img class="object_pictures" src="" alt="workers picture"></p>
             <p id="workers-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container vehicles-passive">
             <h1 id="vehicles">Vehicles Lv.)</h1>
-            <p>Vehicles that can move large amounts of dirt. +5 dirt per tick. <img class="object_pictures" src="" alt="vehicles picture"></p>
+            <p>Vehicles that can move large amounts of dirt. <br>+5 dirt per tick. <img class="object_pictures" src="" alt="vehicles picture"></p>
             <p id="vehicles-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container slaves-passive">
             <h1 id="slaves">Slaves Lv.</h1>
-            <p>People collecting dirt. Not paid. +1 dirt per tick. <img class="object_pictures" src="" alt="slaves picture"></p>
+            <p>People collecting dirt. Not paid. <br>+1 dirt per tick. <img class="object_pictures" src="" alt="slaves picture"></p>
             <p id="slaves-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container forester-passive">
             <h1 id="forester">Forester Lv.</h1>
-            <p>Collects wood. +100 wood per tick. <img class="object_pictures" src="" alt="lumberjack picture"></p>
+            <p>Collects wood. <br>+100 wood per tick. <img class="object_pictures" src="" alt="lumberjack picture"></p>
             <p id="forester-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container rock_quarry-passive">
             <h1 id="rock_quarry">Rock Quarry Lv.</h1>
-            <p>An area with lots of stone. +100 stone per tick. <img class="object_pictures" src="" alt="rock_quarry picture"></p>
+            <p>An area with lots of stone. <br>+100 stone per tick. <img class="object_pictures" src="" alt="rock_quarry picture"></p>
             <p id="rock_quarry-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container ore_quarry">
             <h1 id="ore_quarry">Ore Quarry Lv.</h1>
-            <p>An area with lots of ore. +100 metal per tick. <img class="object_pictures" src="" alt="ore_quarry"></p>
+            <p>An area with lots of ore. <br>+100 metal per tick. <img class="object_pictures" src="" alt="ore_quarry"></p>
             <p id="ore_quarry-dirt">Cost: 0 dirt</p>
           </div>
 
@@ -131,78 +128,78 @@
           <p class="text-center scroll-title">Active Upgrades</p>
           <div class="text-container buckets-upgrade">
             <h1 class="upgrade-bucket">Buckets Upgrade (Level 1)</h1>
-            <p>A simple bucket for collecting dirt. +1 dirt per click. <img class="object_pictures" src="./images/resources/bucket.png" alt="bucket"></p>
+            <p>A simple bucket for collecting dirt. <br>+1 dirt per click. <img class="object_pictures" src="./images/resources/bucket.png" alt="bucket"></p>
             <p id="bucket-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container shovels-upgrade">
             <h1 class="upgrade-shovel">Shovels Upgrade (Level 1)</h1>
-            <p>A simple shovel for collecting dirt. +5 dirt per click. <img class="object_pictures" src="./images/resources/shovel.png" alt="shovel"></p>
+            <p>A simple shovel for collecting dirt. <br>+5 dirt per click. <img class="object_pictures" src="./images/resources/shovel.png" alt="shovel"></p>
             <p id="shovel-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container trucks-upgrade">
             <h1 class="upgrade-truck">Trucks Upgrade (Level 1)</h1>
-            <p>A powerful truck for collecting dirt. +25 dirt per click. <img class="object_pictures" src="./images/resources/thetruck.png" alt="truck"></p>
+            <p>A powerful truck for collecting dirt. <br>+25 dirt per click. <img class="object_pictures" src="./images/resources/thetruck.png" alt="truck"></p>
             <p id="truck-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container excavators-upgrade">
             <h1 class="upgrade-excavator">Excavator Upgrade (Level 1)</h1>
-            <p>A machine that excavates dirt. +50 dirt per click. </p>
+            <p>A machine that excavates dirt. <br>+50 dirt per click. </p>
             <p id="excavator-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container backhoes-upgrade">
             <h1 class="upgrade-backhoe">Backhoe Upgrade (Level 1)</h1>
-            <p>A machine that shovels dirt. +100 dirt per click. </p>
+            <p>A machine that shovels dirt. <br>+100 dirt per click. </p>
             <p id="backhoe-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container axes-upgrade">
             <h1 class="upgrade-axe">Axe Upgrade (Level 1)</h1>
-            <p>A simple axe for collecting wood. +1 wood per click. 
+            <p>A simple axe for collecting wood. <br>+1 wood per click. 
               <img class="object_pictures" src="./images/resources/axe.png" alt="axe"></p>
             <p id="axe-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container hacksaws-upgrade">
             <h1 class="upgrade-hacksaw">Hacksaw Upgrade (Level 1)</h1>
-            <p>A saw for sawing wood. +5 wood per click.
+            <p>A saw for sawing wood. <br>+5 wood per click.
               <img class="object_pictures" src="./images/resources/hacksaw.png" alt="hacksaw"></p>
             <p id="hacksaw-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container chainsaws-upgrade">
             <h1 class="upgrade-chainsaw">Chainsaw Upgrade (Level 1)</h1>
-            <p>An automated saw for collecting wood. +15 wood per click.
+            <p>An automated saw for collecting wood. <br>+15 wood per click.
               <img class="object_pictures" src="./images/resources/chainsaw.png" alt="chainsaw"></p>
             <p class="chainsaw-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container pickaxes-upgrade">
             <h1 class="upgrade-pickaxes">Pickaxe Upgrade (Level 1)</h1>
-            <p>A simple pickaxe for collecting stone. +1 stone per click.
+            <p>A simple pickaxe for collecting stone. <br>+1 stone per click.
               <img class="object_pictures" src="./images/resources/pickaxe.png" alt="pickaxe"></p>
             <p class="pickaxes-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container sledgehammers-upgrade">
             <h1 class="upgrade-sledgehammers">Sledgehammer Upgrade (Level 1)</h1>
-            <p>A sledgehammer to break up stone. +5 stone per click.
+            <p>A sledgehammer to break up stone. <br>+5 stone per click.
               <img class="object_pictures" src="./images/resources/sledgehammer.png" alt="sledgehammer"></p>
             <p class="sledgehammer-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container dynamites-upgrade">
             <h1 class="upgrade-dynamite">Dynamite Upgrade (Level 1)</h1>
-            <p>Blows up stone. +25 stone per click.</p>
+            <p>Blows up stone. <br>+25 stone per click.</p>
             <p class="dynamite-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container drills-upgrade">
             <h1 class="upgrade-drills">Drill Upgrade (Level 1)</h1>
-            <p>A simple drill for collecting metal. +3 metal per tick. 
+            <p>A simple drill for collecting metal. <br>+3 metal per tick. 
               <img class="object_pictures" src="./images/resources/drill.png" alt="drill"></p>
             <p class="drills-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container minecarts-upgrade">
             <h1 class="upgrade-minecarts">Minecart Upgrade (Level 1)</h1>
-            <p>A cart for metal. +15 metal per click. </p>
+            <p>A cart for metal. <br>+15 metal per click. </p>
             <p class="minecarts-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container extractors-upgrade">
             <h1 class="upgrade-extractors">Extractor Upgrade (Level 1)</h1>
-            <p>Collects metal at an incredible rate. +50 metal per click. </p>
+            <p>Collects metal at an incredible rate. <br>+50 metal per click. </p>
             <p class="extractors-dirt">Cost: 0 dirt</p>
           </div>
           <div class="text-container students-purchase">
@@ -265,6 +262,7 @@
             <p>A building where engineers extract resources better</p>
             <p>Cost: 80,000 stone, 60,000 wood, 100 metal</p>
           </div>
+
           <div class="text-container building WMC-upgrade">
             <h1 class="title">West Mall Centre</h1>
             <p>A building where business students bargain costs.</p>

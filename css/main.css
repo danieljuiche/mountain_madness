@@ -1,6 +1,10 @@
 /* Css styling goes here */
 
 /*Prevents highlighting of css elements*/
+.left-box:not(.scrollable) {
+	background-color: rgb(241, 236, 218);
+}
+
 .noSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -44,7 +48,10 @@
 	End of overlay section
 
 */
-
+.top-text {
+	font-weight: bold;
+	font-family: Trebuchet MS;
+}
 .not-allowed {
     background-color: lightgrey;
 	cursor: not-allowed;
@@ -64,8 +71,13 @@
 
 .no-bullets {
 	list-style-type: none;
+	font-family: Trebuchet MS;
 }
 
+h1 {
+	font-size: 30px;
+
+}
 .object_pictures {
 	margin-right:3em;
 }
@@ -93,14 +105,9 @@
 
 .round {
 	border-radius: 25px 25px 25px 25px;
+	padding: 0.3em,0.3em,0.3em.0.3em;
+	margin-bottom: 1em;
 }
-
-.button-group {
-	display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-
 
 .left-box {
 	border: 2px solid black;
@@ -111,11 +118,14 @@
 .text-container {
 	border-radius: 25px;
 	padding-left: 1em;
+	background: #d6ffc4;
 }
 
 .scroll-title {
+	font-size: 25px;
 	padding-top: .5em;
 	font-weight: bold;
+	font-family: Trebuchet MS;
 }
 
 .box {
@@ -134,6 +144,7 @@
     height: calc(100% - 60px);
     width: 100%;
     background-color: #f1ecda;
+
 }
 .div-wrapper img {
     position: absolute;
@@ -151,6 +162,10 @@ img {
 	left: 50%;
 	bottom: 0px;
 	transform: translate(-50%, 0);
+}
+
+#play-area {
+	background-color: rgb(241, 236, 218);
 }
 
 /* Displaying mountain stages by id (mountain0 = default)*/
