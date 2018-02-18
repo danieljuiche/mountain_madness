@@ -1,9 +1,17 @@
 /* Css styling goes here */
 
+
+.absolute {
+	position: absolute;
+}
+
+.relative {
+	position: relative;
+}
+
 .no-bullets {
 	list-style-type: none;
 }
-
 
 .scrollable {
 	position: relative;
@@ -31,6 +39,133 @@
 	bottom:0
 }
 
+/* Putting the mountain stages on the bottom of div container */
+.div-wrapper {
+    position: relative;
+    height: calc(100% - 60px);
+    width: 100%;
+    background-color: #f1ecda;
+}
+.div-wrapper img {
+    position: absolute;
+    /*left: 0;
+    bottom: 0;*/
+}
+
+/*Adjusting the size of img to fit the screen*/
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.mountain {
+	left: 50%;
+	bottom: 0px;
+	transform: translate(-50%, 0);
+}
+
+/* Displaying mountain stages by id (mountain0 = default)*/
+#mountain0 {
+	display: none;
+}
+#mountain1 {
+	display: none;
+}
+#mountain2 {
+	display: none;
+}
+#mountain3 {
+	display: none;
+}
+#mountain4 {
+	display: none;
+}
+#mountain5 {
+	display: block;
+
+}
+
+/* Positioning of resources */
+#f-metal {
+	top: 23%;
+	left: 6%;
+}
+#f-stone {
+	top: 3%;
+	left: 22%;
+}
+#f-wood {
+	top: 15%;
+	left: 80%;
+}
+
+/* Positioning of buildings */
+
+#build1 {
+	bottom: 48.5%;
+	left: 22%;
+	display: block;
+}
+
+#build2 {
+	bottom: 48.5%;
+	left: 40%;
+	display: block;
+}
+
+#build3 {
+	bottom: 48.5%;
+	left: 53%;
+	display: block;
+}
+
+#build4 {
+	bottom: 48.5%;
+	left: 31%;
+	display: block;
+}
+
+#build5 {
+	bottom: 48.5%;
+	left: 44%;
+	display: block;
+}
+
+#build6 {
+	bottom: 48.5%;
+	left: 70%;
+	display: block;
+}
+
+#build7 {
+	bottom: 48.5%;
+	left: 28%;
+	display: block;
+}
+
+#build8 {
+	bottom: 48.5%;
+	left: 41%;
+	display: block;
+}
+
+#build9 {
+	bottom: 48.5%;
+	left: 61%;
+	display: block;
+}
+
+#build10 {
+	bottom: 48.5%;
+	left: 67%;
+	display: block;
+}
+
 .text-container {
 	border:1px solid black;
+}
+
+.object_pictures {
+	float:right;
+	width: 5em;
 }
