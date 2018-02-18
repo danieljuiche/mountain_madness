@@ -1,0 +1,41 @@
+//University Raid
+p = randint(0,1);
+if (students >= 100)
+{
+   //send them on a raid
+   students -= 100;
+   if (p=1)
+   {
+      students += 150;
+   }
+}
+
+//Tech Institute Raid
+p = randint(0,1);
+s = randint(0,100000);
+m = randint(0,100000);
+w = randint(0,100000);
+
+if (students >= 100)
+{
+   //send students on a raid
+   students -= 100;
+   if (p=1)
+   {
+      stone += s;
+      metal += m;
+      wood += w;
+   }
+}
+
+//College Raid
+p = randint(0,1)
+if (students >= 100)
+{
+   //send students on raid
+   students -= 100;
+   if (p=1)
+   {
+      dirt +== 150000;
+   }
+}
