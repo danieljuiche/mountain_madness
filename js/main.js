@@ -189,58 +189,58 @@ $(document).ready(function() {
 			metal: 0
 		},
 		dormitory: {
-			dirt: 1000,
-			wood: 0,
-			stone: 0,
-			metal: 0
+			dirt: 0,
+			wood: 10000,
+			stone: 10000,
+			metal: 100
 		},
 		MBC: {
 			dirt: 0,
 			wood: 0,
-			stone: 0,
-			metal: 0
+			stone: 20000,
+			metal: 15000
 		},
 		blusson: {
 			dirt: 0,
-			wood: 0,
-			stone: 0,
-			metal: 0
+			wood: 17500,
+			stone: 22500,
+			metal: 100
 		},
 		SSC: {
 			dirt: 0,
-			wood: 0,
-			stone: 0,
-			metal: 0
+			wood: 20000,
+			stone: 25000,
+			metal: 100
 		},
 		library: {
 			dirt: 0,
-			wood: 0,
-			stone: 0,
-			metal: 0
+			wood: 20000,
+			stone: 30000,
+			metal: 100
 		},
 		SUB: {
 			dirt: 0,
-			wood: 0,
-			stone: 0,
-			metal: 0
+			wood: 30000,
+			stone: 40000,
+			metal: 100
 		},
 		saywell: {
 			dirt: 0,
-			wood: 0,
-			stone: 0,
-			metal: 0
+			wood: 45000,
+			stone: 60000,
+			metal: 100
 		},
 		ASB: {
 			dirt: 0,
-			wood: 0,
-			stone: 0,
-			metal: 0
+			wood: 60000,
+			stone: 80000,
+			metal: 100
 		},
 		WMC: {
 			dirt: 0,
-			wood: 0,
-			stone: 0,
-			metal: 0
+			wood: 75000,
+			stone: 100000,
+			metal: 100
 		}
 	}
 
