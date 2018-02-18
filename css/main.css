@@ -202,12 +202,15 @@ li {
     position: relative;
     height: 100%;
     width: 100%;
-    background-color: #f1ecda;
 }
 .div-wrapper img {
     position: absolute;
     /*left: 0;
     bottom: 0;*/
+}
+
+#play-area {
+    background-color: #f1ecda;
 }
 
 /*Adjusting the size of img to fit the screen*/
