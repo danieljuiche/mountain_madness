@@ -707,10 +707,13 @@ $(document).ready(function() {
 			switch(num) {
 				case 1:
 					resource_change(100000,0,0,0,0);
+					break;
 				case 2:
 					resource_change(0,100000,0,0,0);
+					break;
 				case 3:
 					resource_change(0,0,100000,0,0);
+					break;
 				case 4:
 					resource_change(0,0,0,100000,0);
 			}
