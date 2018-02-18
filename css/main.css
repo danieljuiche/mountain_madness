@@ -88,7 +88,8 @@ h1 {
 	top: 25%;
     right: 25px;
     margin-right: 0px;
-    height: 100px;
+    max-height: 100px;
+    width: 65px;
 }
 
 .scrollable {
@@ -283,4 +284,8 @@ img {
 
 .text-container {
 	border:1px solid black;
+}
+
+#img-student {
+	height: 55px;
 }
