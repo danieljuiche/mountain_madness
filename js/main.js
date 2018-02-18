@@ -13,7 +13,10 @@ $(document).ready(function() {
 		stone_per_click: 1,
 		metal_per_click: 1,
 		purchased_passives: {
-			workers_level: 0,
+			workers: {
+				level: 0,
+				cost: 100
+			},
 			vehicles_level: 0,
 			slaves_level: 0,
 			forester_level: 0,
@@ -49,54 +52,42 @@ $(document).ready(function() {
 
 	var game_update_frequency = 500; //Milliseconds
 
-	// Object for active skills
+	// Check for passive upgrades
+	//dirt_slaves upgrade button
+	$("#dirt_slaves").click(function() {
+		if(dirt >= 250) {
+			player_stats.purchased_passives.dirt_level += 1;
+			resource_change(250,0,0,0,0);
+		}	
+	});
 
-	// Active upgrade information
-	// var active_upgrades = {
-	// 	dirt: {
-	// 		costs: {
-	// 			level_1: 10 
-	// 		}
-	// 		benefits:
-	// 		description:
-	// 	}
+	// collect_wood upgrade button
+	$("#collect_wood").click(function() {
+		if(dirt >= 25000) {
+			player_stats.purchased_passives.wood_level += 1;
+			resource_change(25000,0,0,0,0);
+		}
+	});
 
-	// }
+	// collect_stone upgrade button
+	$("#collect_stone").click(function() {
+		if(dirt >= 15000) {
+			player_stats.purchased_passives.stone_level += 1;
+			resource_change(15000,0,0,0,0);
+		}
+	});
+
+	//collect_metal upgrade button
+	$("#collect_ore").click(function() {
+		if(dirt >= 50000) {
+			player_stats.purchased_passives.metal_level += 1;
+			resource_change(50000,0,0,0,0);
+		}
+	});
+
 
 	// Main game loop which updates at set intervals
 	setInterval(function(){ 
-		// Check for passive upgrades
-		//dirt_slaves upgrade button
-		$("#dirt_slaves").click(function() {
-			if(dirt >= 250) {
-				player_stats.purchased_passives.dirt_level += 1;
-				resource_change(250,0,0,0,0);
-			}	
-		});
-
-		// collect_wood upgrade button
-		$("#collect_wood").click(function() {
-			if(dirt >= 25000) {
-				player_stats.purchased_passives.wood_level += 1;
-				resource_change(25000,0,0,0,0);
-			}
-		});
-
-		// collect_stone upgrade button
-		$("#collect_stone").click(function() {
-			if(dirt >= 15000) {
-				player_stats.purchased_passives.stone_level += 1;
-				resource_change(15000,0,0,0,0);
-			}
-		});
-
-		//collect_metal upgrade button
-		$("#collect_ore").click(function() {
-			if(dirt >= 50000) {
-				player_stats.purchased_passives.metal_level += 1;
-				resource_change(50000,0,0,0,0);
-			}
-		});
 		update_resources();
 	}, game_update_frequency);
 
